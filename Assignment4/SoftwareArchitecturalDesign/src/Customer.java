@@ -28,40 +28,52 @@ public class Customer {
 	///////////////////////////////////////////////////////////////
 	
 	// Sets customerID for this object to the value of the parameter “id”.
-	void setCustomerID(int id) {return;} // STUB
+	void setCustomerID(int id) {
+		this.customerID = id;
+	} // STUB
 	
 	// Sets name for this object to the value of the parameter “name”.
-	void setName(String name) {return;} // STUB
+	void setName(String name) {
+		this.name = name;
+	} // STUB
 	
 	// Sets the address for this object to “address”.
-	void setAddress(String address) {return;} // STUB
+	void setAddress(String address) {
+		this.address = address;
+	} // STUB
 	
 	// Sets ccType for this object to the value of the parameter “ccType”.
-	void setCCType(String ccType) {return;} // STUB
+	void setCCType(String ccType) {
+		this.ccType = ccType;
+	} // STUB
 	
 	// Sets ccNumber for this object to the value of the parameter “ccNumber”.
-	void setCCNumber(String ccNumber) {return;} // STUB
+	void setCCNumber(String ccNumber) {
+		this.ccNumber = ccNumber;
+	} // STUB
 	
 	// Sets the CCExpiration for this object to the value of the parameter “ccExpiration”.
-	void setCCExpiration(String ccExpiration) {return;} // STUB
+	void setCCExpiration(String ccExpiration) {
+		this.ccExpiration = ccExpiration;
+	} // STUB
 	
 	// Retrieves the instance variable “customerID” for this object.
-	int getCustomerID() {return 0;} // STUB
+	int getCustomerID() {return this.customerID;} // STUB
 	
 	// Retrieves the instance variable “name” for this object.
-	String getName() {return null;} // STUB
+	String getName() {return this.name;} // STUB
 	
 	// Retrieves the instance variable “address” for this object.
-	String getAddress() {return null;} // STUB
+	String getAddress() {return this.address;} // STUB
 	
 	// Retrieves the instance variable “ccType” for this object.
-	String getCCType() {return null;} // STUB
+	String getCCType() {return this.ccType;} // STUB
 	
 	// Retrieves the instance variable “ccNumber” for this object.
-	String getCCNumber() {return null;} // STUB
+	String getCCNumber() {return this.ccNumber;} // STUB
 	
 	// Retrieves the instance variable “ccExpiration” for this object.
-	String getCCExpiration() {return null;} // STUB
+	String getCCExpiration() {return this.getCCExpiration();} // STUB
 	
 	
 	///////////////////////////////////////////////////////////////
