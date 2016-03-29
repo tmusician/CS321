@@ -23,7 +23,7 @@ public class ReservationSystem{
 			}
 		}
 		catch(Exception IOException){
-			System.out.println("No such file found");
+			System.out.println("No such file found")
 		}
 	}
 	
