@@ -5,12 +5,10 @@ public class Rooms {
 	//list of rooms, location in array goes to room #. Double is location+size of singles 
 	private static ArrayList<Integer> sigRoomsInUse = new ArrayList<Integer>();
 	private static ArrayList<Integer> doubRoomsInUse = new ArrayList<Integer>();
-	private static int numSig;
-	private static int numDob;
 	
 	public static void init(){
-		numSig=Framework.NUM_SINGLE_ROOMS;
-		numDob=Framework.NUM_DOUBLE_ROOMS;
+		int numSig=Framework.NUM_SINGLE_ROOMS;
+		int numDob=Framework.NUM_DOUBLE_ROOMS;
 		//set all to 0, meaning empty
 		for(int i=0; i<numSig;i++){
 			sigRoomsInUse.add(0);
@@ -21,12 +19,8 @@ public class Rooms {
 	}
 	
 	public static void fillRoom(int roomNum) {
-		if(roomNum>numSig){
-			doubRoomsInUse.set(roomNum-numSig-1, 1);
-		}
-		else{
-			sigRoomsInUse.set(roomNum, 1);
-		}
+		// TODO Auto-generated method stub
+		
 	}
 
 	public static int getEmpty(int roomType) {
