@@ -31,84 +31,102 @@ public class Reservation {
 	// SETTERS & GETTERS
 	///////////////////////////////////////////////////////////////
 	
-	// Sets reservationID for this object to the value of the parameter “id”.
-	void setReservationID(int reservationID){return;} // STUB
+	// Sets reservationID for this object to the value of the parameter ï¿½idï¿½.
+	void setReservationID(int reservationID){
+		this.reservationID=reservationID;
+		return;
+	} // STUB
 	
-	// Sets status for this object to the value of the parameter “status”
-	void setStatus(int status){return;} // STUB
+	// Sets status for this object to the value of the parameter ï¿½statusï¿½
+	void setStatus(int status){
+		this.status=status;
+		return;
+	} // STUB
 	
-	// Sets startDate for this object to the value of parameter “startDate”.
-	void setStartDate(int startDate){return;} // STUB
+	// Sets startDate for this object to the value of parameter ï¿½startDateï¿½.
+	void setStartDate(int startDate){
+		this.startDate=startDate;
+		return;
+	} // STUB
 	
-	// Sets endDate for this object to the value of parameter “endDate”.
-	void setEndDate(int endDate){return;} // STUB
+	// Sets endDate for this object to the value of parameter ï¿½endDateï¿½.
+	void setEndDate(int endDate){
+		this.endDate=endDate;
+		return;
+	} // STUB
 	
-	// Sets roomType for this object to the value of parameter “roomType”.
-	void setRoomType(int roomType){return;} // STUB
+	// Sets roomType for this object to the value of parameter ï¿½roomTypeï¿½.
+	void setRoomType(int roomType){
+		this.roomType=roomType;
+		return;
+	} // STUB
 	
-	// Sets numOccupants for this object to the value of parameter “numOccupants”.
-	void setNumOccupants(int numOccupants){return;} // STUB
+	// Sets numOccupants for this object to the value of parameter ï¿½numOccupantsï¿½.
+	void setNumOccupants(int numOccupants){
+		this.numOccupants=numOccupants;
+		return;
+	} // STUB
 	
-	// Sets guaranteed for this object to the value of parameter “”. 
+	// Sets guaranteed for this object to the value of parameter ï¿½ï¿½. 
 	// (I copied these descriptions. this one seems a little confused about what it's doing)
-	void setGuaranteed(int guaranteed){return;} // STUB
+	void setGuaranteed(int guaranteed){
+		if(guaranteed==1){
+			this.guaranteed=true;
+		}
+		else{
+			this.guaranteed=false;
+		}
+		return;
+	} // STUB
 	
-	// Sets roomNumber for this object to the value of parameter “roomNum”.
-	void setRoomNumber(int roomNum){return;} // STUB
+	// Sets roomNumber for this object to the value of parameter ï¿½roomNumï¿½.
+	void setRoomNumber(int roomNum){
+		this.roomNumber=roomNum;
+		return;
+	} // STUB
 	
-	// Sets customerID for this object to the value of parameter “customerID”.
-	void setCustomerID(int customerID){return;} // STUB
+	// Sets customerID for this object to the value of parameter ï¿½customerIDï¿½.
+	void setCustomerID(int customerID){
+		this.customerID=customerID;
+		return;
+	} // STUB
 	
-	// Retrieves the instance variable “reservationID” for this object.
-	int getReservationID(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½reservationIDï¿½ for this object.
+	int getReservationID(){
+		return this.reservationID;} // STUB
 	
-	// Retrieves the instance variable “status” for this object.
-	int getStatus(){return 0;} // STUB	
+	// Retrieves the instance variable ï¿½statusï¿½ for this object.
+	int getStatus(){
+		return this.status;} // STUB	
 	
-	// Retrieves the instance variable “startDate” for this object.
-	int getStartDate(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½startDateï¿½ for this object.
+	int getStartDate(){
+		return this.startDate;} // STUB
 	
-	// Retrieves the instance variable “endDate” for this object.
-	int getEndDate(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½endDateï¿½ for this object.
+	int getEndDate(){return this.endDate;} // STUB
 	
-	// Retrieves the instance variable “roomType” for this object.
-	int getRoomType(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½roomTypeï¿½ for this object.
+	int getRoomType(){return this.roomType;} // STUB
 	
-	// Retrieves the instance variable “numOccupants” for this object.
-	int getNumOccupants(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½numOccupantsï¿½ for this object.
+	int getNumOccupants(){return this.numOccupants;} // STUB
 	
-	// Retrieves the instance variable “guaranteed” for this object.
-	int getGuaranteed(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½guaranteedï¿½ for this object.
+	int getGuaranteed(){
+		if(this.guaranteed==true){
+			return 1;
+		}
+		else{
+			return 0;// STUB
+		}
+	}
 	
-	// Retrieves the instance variable “roomNumber” for this object.
-	int getRoomNumber(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½roomNumberï¿½ for this object.
+	int getRoomNumber(){return this.roomNumber;} // STUB
 	
-	// Retrieves the instance variable “customerID” for this object.
-	int getCustomerID(){return 0;} // STUB
+	// Retrieves the instance variable ï¿½customerIDï¿½ for this object.
+	int getCustomerID(){return this.customerID;} // STUB
 
-	
-	/////////////////////////////////////////////////////////////////
-	// METHODS
-	///////////////////////////////////////////////////////////////
-	
-	// Stores a new reservation with the data contained in the given Reservation object. 
-	// Assigns a new reservation ID to the reservation and returns the generated ID. 
-	int storeReservation(Reservation res){return 0;} // STUB
-	
-	// Removes the reservation with the given reservationID from the system. Returns 
-	// true if successful, or false if no reservation with the given reservationID exists. 
-	boolean deleteReservation(int reservationID){return false;} // STUB
-	
-	// Returns the reservation with the given reservationID. Returns null if no reservation 
-	//with the given reservationID exists. 
-	Reservation getReservationByID(int reservationID){return null;} // STUB
-	
-	// Returns the reservation with the given customerID. Returns null if no reservation 
-	// with the given customerID exists.
-	Reservation getReservationByCID(int customerID){return null;} // STUB
-	
-	// Replaces the stored reservation with given reservationID with the reservation data 
-	// contained in res. Returns true if successful, otherwise returns false if reservation 
-	// with given reservationID does not exist.
-	boolean modifyReservation(int reservationID, Reservation res){return false;} // STUB
 }
+	
