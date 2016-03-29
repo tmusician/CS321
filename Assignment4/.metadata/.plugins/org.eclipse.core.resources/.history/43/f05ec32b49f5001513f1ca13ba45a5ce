@@ -1,0 +1,93 @@
+
+public class Reservation {
+	
+	///////////////////////////////////////////////////////////////
+	// FIELDS
+	///////////////////////////////////////////////////////////////
+	
+	private int endDate;		// The end date of the reservation (1-31)
+	private int roomType;		// The room type (1 for single, 2 for double)
+	private int numOccupants;	// The number of occupants in the room
+	private boolean guaranteed; // True if the reservation is guaranteed with a credit card, false if not guaranteed
+	private int roomNumber;		// The room number assigned to this reservation
+	private int customerID;		// The customer ID for the customer who made this reservation
+	
+	
+	/////////////////////////////////////////////////////////////////
+	// CONSTRUCTORS
+	///////////////////////////////////////////////////////////////
+	
+	// Default constructor
+	Reservation(){
+		endDate = roomType = numOccupants = roomNumber = customerID = 0;
+		guaranteed = false;
+	}
+	
+	
+	/////////////////////////////////////////////////////////////////
+	// SETTERS & GETTERS
+	///////////////////////////////////////////////////////////////
+	
+	// Sets reservationID for this object to the value of the parameter “id”.
+	void setReservationID(int reservationID){return;} // STUB
+	
+	// Sets status for this object to the value of the parameter “status”
+	void setStatus(int status){return;} // STUB
+	
+	// Sets startDate for this object to the value of parameter “startDate”.
+	void setStartDate(int startDate){return;} // STUB
+	
+	// Sets endDate for this object to the value of parameter “endDate”.
+	void setEndDate(int endDate){return;} // STUB
+	
+	// Sets roomType for this object to the value of parameter “roomType”.
+	void setRoomType(int roomType){return;} // STUB
+	
+	// Sets numOccupants for this object to the value of parameter “numOccupants”.
+	void setNumOccupants(int numOccupants){return;} // STUB
+	
+	// Sets guaranteed for this object to the value of parameter “”. (I copied these descriptions. this one seems a little confused about what it's doing)
+	void setGuaranteed(int guaranteed){return;} // STUB
+	
+	// Sets roomNumber for this object to the value of parameter “roomNum”.
+	void setRoomNumber(int roomNum){return;} // STUB
+	
+	// Sets customerID for this object to the value of parameter “customerID”.
+	void setCustomerID(int customerID){return;} // STUB
+	
+	// Retrieves the instance variable “reservationID” for this object.
+	int getReservationID(){return 0;} // STUB
+	
+	// Retrieves the instance variable “status” for this object.
+	int getStatus(){return 0;} // STUB	
+	
+	// Retrieves the instance variable “startDate” for this object.
+	int getStartDate(){return 0;} // STUB
+	
+	// Retrieves the instance variable “endDate” for this object.
+	int getEndDate(){return 0;} // STUB
+	
+	// Retrieves the instance variable “roomType” for this object.
+	int getRoomType(){return 0;} // STUB
+	
+	// Retrieves the instance variable “numOccupants” for this object.
+	int getNumOccupants(){return 0;} // STUB
+	
+	// Retrieves the instance variable “guaranteed” for this object.
+	int getGuaranteed(){return 0;} // STUB
+	
+	// Retrieves the instance variable “roomNumber” for this object.
+	int getRoomNumber(){return 0;} // STUB
+	
+	// Retrieves the instance variable “customerID” for this object.
+	int getCustomerID(){return 0;} // STUB
+
+	
+	/////////////////////////////////////////////////////////////////
+	// METHODS
+	///////////////////////////////////////////////////////////////
+	
+	// Stores a new reservation with the data contained in the given Reservation object. 
+	// Assigns a new reservation ID to the reservation and returns the generated ID. 
+	int storeReservation(Reservation res){return 0;} // STUB
+}

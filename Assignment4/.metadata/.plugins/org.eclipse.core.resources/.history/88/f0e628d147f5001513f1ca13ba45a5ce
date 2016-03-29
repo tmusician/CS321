@@ -1,0 +1,67 @@
+
+public class Reservation {
+	
+	// FIELDS
+	
+	private int endDate;		// The end date of the reservation (1-31)
+	private int roomType;		// The room type (1 for single, 2 for double)
+	private int numOccupants;	// The number of occupants in the room
+	private boolean guaranteed; // True if the reservation is guaranteed with a credit card, false if not guaranteed
+	private int roomNumber;		// The room number assigned to this reservation
+	private int customerID;		// The customer ID for the customer who made this reservation
+	
+	
+	// CONSTRUCTORS
+	
+	// default constructor
+	Reservation(){}
+	
+	
+	// SETTERS & GETTERS
+	
+	void setReservationID(int reservationID){return;} // STUB
+	
+	void setStatus(int status){return;} // STUB
+	
+	void setStartDate(int startDate){return;} // STUB
+	
+	void setEndDate(int endDate){return;} // STUB
+	
+	void setRoomType(int roomType){return;} // STUB
+	
+	void setNumOccupants(int numOccupants){return;} // STUB
+	
+	void setGuaranteed(int guaranteed){return;} // STUB
+	
+	void setRoomNumber(int roomNum){return;} // STUB
+	
+	void setCustomerID(int customerID){return;} // STUB
+	
+	int getReservationID(){return 0;} // STUB
+	
+	//Retrieves the instance variable “status” for this object.
+	int getStatus(){return 0;} // STUB	
+	
+	//Retrieves the instance variable “startDate” for this object.
+	int getStartDate(){return 0;}	
+	
+	//Retrieves the instance variable “endDate” for this object.
+	int getEndDate(){return 0;}
+	
+	//Retrieves the instance variable “roomType” for this object.
+	int getRoomType(){return 0;}
+	
+	//Retrieves the instance variable “numOccupants” for this object.
+	int getNumOccupants(){return 0;}
+	
+	//Retrieves the instance variable “guaranteed” for this object.
+	int getGuaranteed(){return 0;}
+	
+	//Retrieves the instance variable “roomNumber” for this object.
+	int getRoomNumber(){return 0;}	
+	
+	//Retrieves the instance variable “customerID” for this object.
+	int getCustomerID(){return 0;}
+
+	
+}

@@ -1,0 +1,48 @@
+
+public class Customer {
+	
+	///////////////////////////////////////////////////////////////
+	// FIELDS
+	///////////////////////////////////////////////////////////////
+	
+	private int customerID; 		// A unique identifier for the customer, assigned by the Framework
+	private String name;			// The customer’s full name
+	private String address;			// The customer's address
+	private String ccType;			// The type of credit card (Mastercard, Visa, etc)
+	private String ccNumber;		// The credit card number
+	private String ccExpiration;	// The expiration date of the credit card
+	
+	
+	///////////////////////////////////////////////////////////////
+	// CONSTRUCTORS
+	///////////////////////////////////////////////////////////////
+	
+	// Default Constructor
+	Customer(){
+		customerID = 0;
+		name = address = ccType = ccNumber = ccExpiration = "";
+	}
+	
+	///////////////////////////////////////////////////////////////
+	// GETTERS & SETTERS
+	///////////////////////////////////////////////////////////////
+	
+	// Sets customerID for this object to the value of the parameter “id”.
+	void setCustomerID(int id){return;} // STUB
+	
+	// Sets name for this object to the value of the parameter “name”.
+	void setName(String name){return;} // STUB
+	
+	// Sets the address for this object to “address”.
+	void setAddress(String address){return;} // STUB
+	
+	// Sets ccType for this object to the value of the parameter “ccType”.
+	void setCCType(String ccType){return;} // STUB
+	
+	
+	
+	///////////////////////////////////////////////////////////////
+	// METHODS
+	///////////////////////////////////////////////////////////////
+	
+}
