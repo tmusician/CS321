@@ -1,6 +1,6 @@
 
 public class MakeReservation {
-	private static void run(){
+	private static void main(){
 		String x=Framework.getNextInstruction();
 		Customer newCust= new Customer();
 		

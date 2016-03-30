@@ -1,7 +1,7 @@
 
 public class CheckIn {
 
-	public static void run(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String x=Framework.getNextInstruction();
 		Customer cust=Framework.getCustomerByName(x);
