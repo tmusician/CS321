@@ -17,9 +17,9 @@ public class MakeReservation {
 		x=Framework.getNextInstruction();
 		int roomType=Integer.parseInt(x);
 		//check with calendar
-		Calendar.checkDays(startDate,stopDate,roomType);
+		Calander.checkDays(startDate,stopDate,roomType);
 		//handle what to do no idea where to print errors too, could just ignore rest and iterate till next thing
-		Calendar.addReservation(startDate, stopDate, roomType);
+		Calander.addReservation(startDate, stopDate, roomType);
 		newRes.setStartDate(startDate);
 		newRes.setEndDate(stopDate);
 		newRes.setRoomType(roomType);

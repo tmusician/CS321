@@ -3,8 +3,7 @@ public class ReservationSystem{
 		//need calander for day
 		try{
 			Framework.init(args[0]);
-			Calendar.init();
-			Rooms.init();
+			Calander.init();
 			while(Framework.hasNextInstruction){
 					String[] instructions=Framework.nextInstruction();
 					int next=Integer.parseInt(instructions[0]);
