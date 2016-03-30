@@ -16,7 +16,7 @@ public class Rooms {
 			sigRoomsInUse.add(0);
 		}
 		for(int x=0; x<numDob;x++){
-			doubRoomsInUse.add(0);
+			doubleRoomsInUse.add(0);
 		}
 	}
 	

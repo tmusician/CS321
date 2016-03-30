@@ -21,7 +21,6 @@ public class CheckIn {
 		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
 		int roomNum= Rooms.getEmpty(userRes.getRoomType());
 		Rooms.fillRoom(roomNum);
-		userRes.setRoomNumber(roomNum);
 	}
 
 }
