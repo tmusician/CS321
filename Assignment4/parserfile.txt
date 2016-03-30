@@ -1,0 +1,98 @@
+﻿/*
+* Decompiled with CFR 0_114.
+*/
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Parser {
+   private String filename;
+   private Scanner scan;
+   private Integer nextInstruction;
+
+   public Parser(String string) throws FileNotFoundException {
+       String string2;
+       this.filename = string;
+       this.scan = new Scanner(new FileReader(string));
+       this.nextInstruction = -1;
+       if (this.scan.hasNextLine() && (string2 = this.scan.nextLine()).startsWith("@")) {
+           this.nextInstruction = Integer.parseInt(string2.substring(1));
+       }
+   }
+
+   public boolean hasNextInstruction() {
+       if (this.nextInstruction == -1) {
+           return false;
+       }
+       return true;
+   }
+
+   public String[] getNextInstruction() {
+       if (!this.hasNextInstruction()) {
+           return null;
+       }
+       ArrayList<String> arrayList = new ArrayList<String>();
+       arrayList.add(this.nextInstruction.toString());
+       while (this.scan.hasNextLine()) {
+           String string = this.scan.nextLine().trim();
+           if (string.isEmpty()) continue;
+           if (string.startsWith("@")) {
+               this.nextInstruction = Integer.parseInt(string.substring(1));
+               return arrayList.toArray(new String[arrayList.size()]);
+           }
+           arrayList.add(string);
+       }
+       this.nextInstruction = -1;
+       return arrayList.toArray(new String[arrayList.size()]);
+   }
+}
+/*
+* Decompiled with CFR 0_114.
+*/
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Parser {
+   private String filename;
+   private Scanner scan;
+   private Integer nextInstruction;
+
+   public Parser(String string) throws FileNotFoundException {
+       String string2;
+       this.filename = string;
+       this.scan = new Scanner(new FileReader(string));
+       this.nextInstruction = -1;
+       if (this.scan.hasNextLine() && (string2 = this.scan.nextLine()).startsWith("@")) {
+           this.nextInstruction = Integer.parseInt(string2.substring(1));
+       }
+   }
+
+   public boolean hasNextInstruction() {
+       if (this.nextInstruction == -1) {
+           return false;
+       }
+       return true;
+   }
+
+   public String[] getNextInstruction() {
+       if (!this.hasNextInstruction()) {
+           return null;
+       }
+       ArrayList<String> arrayList = new ArrayList<String>();
+       arrayList.add(this.nextInstruction.toString());
+       while (this.scan.hasNextLine()) {
+           String string = this.scan.nextLine().trim();
+           if (string.isEmpty()) continue;
+           if (string.startsWith("@")) {
+               this.nextInstruction = Integer.parseInt(string.substring(1));
+               return arrayList.toArray(new String[arrayList.size()]);
+           }
+           arrayList.add(string);
+       }
+       this.nextInstruction = -1;
+       return arrayList.toArray(new String[arrayList.size()]);
+   }
+}

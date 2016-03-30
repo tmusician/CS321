@@ -1,0 +1,174 @@
+﻿/*
+* Decompiled with CFR 0_114.
+* 
+* Could not load the following classes:
+*  Customer
+*  Reservation
+*/
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+public class Framework {
+   public static final int NUM_SINGLE_ROOMS = 5;
+   public static final int NUM_DOUBLE_ROOMS = 5;
+   public static final int NUM_DAYS = 31;
+   public static final int SINGLE_RATE = 80;
+   public static final int DOUBLE_RATE = 100;
+   public static final int STATUS_RESERVED = 1;
+   public static final int STATUS_CHECKED_IN = 2;
+   public static final int STATUS_CHECKED_OUT = 3;
+   public static final int STATUS_NO_SHOW = 4;
+   public static final int STATUS_MUST_PAY = 5;
+   private static ArrayList<Reservation> reservations = new ArrayList();
+   private static int reservationIDCount = 0;
+   private static ArrayList<Customer> customers = new ArrayList();
+   private static int customerIDCount = 0;
+   private static Parser parser;
+
+   public static int storeReservation(Reservation reservation) {
+       Reservation reservation2 = Framework.copyReservation(reservation);
+       reservation2.setReservationID(reservationIDCount);
+       ++reservationIDCount;
+       reservations.add(reservation2);
+       return reservation2.getReservationID();
+   }
+
+   public static boolean deleteReservation(int n) {
+       int n2 = -1;
+       for (int i = 0; i < reservations.size(); ++i) {
+           if (reservations.get(i).getReservationID() != n) continue;
+           n2 = i;
+           break;
+       }
+       if (n2 == -1) {
+           return false;
+       }
+       reservations.remove(n2);
+       return true;
+   }
+
+   public static Reservation getReservationByID(int n) {
+       for (int i = 0; i < reservations.size(); ++i) {
+           if (reservations.get(i).getReservationID() != n) continue;
+           return Framework.copyReservation(reservations.get(i));
+       }
+       return null;
+   }
+
+   public static Reservation getReservationByCID(int n) {
+       for (int i = 0; i < reservations.size(); ++i) {
+           if (reservations.get(i).getCustomerID() != n) continue;
+           return Framework.copyReservation(reservations.get(i));
+       }
+       return null;
+   }
+
+   public static boolean modifyReservation(int n, Reservation reservation) {
+       int n2 = -1;
+       for (int i = 0; i < reservations.size(); ++i) {
+           if (reservations.get(i).getReservationID() != n) continue;
+           n2 = i;
+           break;
+       }
+       if (n2 == -1) {
+           return false;
+       }
+       Reservation reservation2 = Framework.copyReservation(reservation);
+       Framework.deleteReservation(n);
+       reservation2.setReservationID(n);
+       reservations.add(reservation2);
+       return true;
+   }
+
+   public static int storeCustomer(Customer customer) {
+       Customer customer2 = Framework.copyCustomer(customer);
+       customer2.setCustomerID(customerIDCount);
+       ++customerIDCount;
+       customers.add(customer2);
+       return customer2.getCustomerID();
+   }
+
+   public static boolean deleteCustomer(int n) {
+       int n2 = -1;
+       for (int i = 0; i < customers.size(); ++i) {
+           if (customers.get(i).getCustomerID() != n) continue;
+           n2 = i;
+           break;
+       }
+       if (n2 == -1) {
+           return false;
+       }
+       customers.remove(n2);
+       return true;
+   }
+
+   public static Customer getCustomerByID(int n) {
+       for (int i = 0; i < customers.size(); ++i) {
+           if (customers.get(i).getCustomerID() != n) continue;
+           return Framework.copyCustomer(customers.get(i));
+       }
+       return null;
+   }
+
+   public static Customer getCustomerByName(String string) {
+       for (int i = 0; i < customers.size(); ++i) {
+           if (!customers.get(i).getName().equals(string)) continue;
+           return Framework.copyCustomer(customers.get(i));
+       }
+       return null;
+   }
+
+   public static boolean modifyCustomer(int n, Customer customer) {
+       int n2 = -1;
+       for (int i = 0; i < customers.size(); ++i) {
+           if (customers.get(i).getCustomerID() != n) continue;
+           n2 = i;
+           break;
+       }
+       if (n2 == -1) {
+           return false;
+       }
+       Customer customer2 = Framework.copyCustomer(customer);
+       Framework.deleteCustomer(n);
+       customer2.setCustomerID(n);
+       customers.add(customer2);
+       return true;
+   }
+
+   private static Customer copyCustomer(Customer customer) {
+       Customer customer2 = new Customer();
+       customer2.setCustomerID(customer.getCustomerID());
+       customer2.setName(customer.getName());
+       customer2.setAddress(customer.getAddress());
+       customer2.setCCType(customer.getCCType());
+       customer2.setCCNumber(customer.getCCNumber());
+       customer2.setCCExpiration(customer.getCCExpiration());
+       return customer2;
+   }
+
+   private static Reservation copyReservation(Reservation reservation) {
+       Reservation reservation2 = new Reservation();
+       reservation2.setReservationID(reservation.getReservationID());
+       reservation2.setStatus(reservation.getStatus());
+       reservation2.setStartDate(reservation.getStartDate());
+       reservation2.setEndDate(reservation.getEndDate());
+       reservation2.setRoomType(reservation.getRoomType());
+       reservation2.setNumOccupants(reservation.getNumOccupants());
+       reservation2.setGuaranteed(reservation.getGuaranteed());
+       reservation2.setRoomNumber(reservation.getRoomNumber());
+       reservation2.setCustomerID(reservation.getCustomerID());
+       return reservation2;
+   }
+
+   public static void init(String string) throws FileNotFoundException {
+       parser = new Parser(string);
+   }
+
+   public static boolean hasNextInstruction() {
+       return parser.hasNextInstruction();
+   }
+
+   public static String[] nextInstruction() {
+       return parser.getNextInstruction();
+   }
+}
