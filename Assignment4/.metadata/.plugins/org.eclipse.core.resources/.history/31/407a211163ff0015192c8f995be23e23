@@ -13,15 +13,15 @@ public class Calendar {
 	
 	public static boolean checkDays(int start, int end, int roomType){
 		if(roomType==1){
-			for(int i=0; i<=end-start; i++){
-				if(dayInfo.get(start+i).getSingleRoom()==0){
+			for(int i=0; i<end-start; i++){
+				if(dayRoomSingle.get(start+i)==Framework.NUM_SINGLE_ROOMS){
 					return false;
 				}
 			}
 		}
 		else if(roomType==2){
-			for(int i=0; i<=end-start; i++){
-				if(dayInfo.get(start+i).getDoubleRoom()==0){
+			for(int i=0; i<end-start; i++){
+				if(dayRoomDouble.get(start+i)==Framework.NUM_DOUBLE_ROOMS){
 					return false;
 				}
 			}
@@ -31,13 +31,15 @@ public class Calendar {
 	
 	public static boolean addReservation(int start, int end, int type){
 		if(type==1){
-			for(int i=0; i<=end-start; i++){
-				dayInfo.get(start+i).addSingleRoom();
+			for(int i=0; i<end-start; i++){
+				int temp=dayRoomSingle.get(start+i);
+				dayRoomSingle.set(start+i, temp+1);
 			}
 		}
 		else if(type==2){
-			for(int i=0; i<=end-start; i++){
-				dayInfo.get(start+i).addDoubleRoom();			
+			for(int i=0; i<end-start; i++){
+				int temp=dayRoomDouble.get(start+i);
+				dayRoomDouble.set(start+i, temp+1);
 			}
 		}
 		return true;

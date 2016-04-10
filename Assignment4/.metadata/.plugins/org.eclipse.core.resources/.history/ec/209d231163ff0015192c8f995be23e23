@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Hotel {
 	private int singleRoom=Framework.NUM_SINGLE_ROOMS;
 	private int doubleRoom=Framework.NUM_DOUBLE_ROOMS;
