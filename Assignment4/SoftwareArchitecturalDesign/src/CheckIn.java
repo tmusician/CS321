@@ -1,36 +1,27 @@
 
-
 public class CheckIn {
 
-	public static void run(String[] instr) {
+	public static void run(String[] args) {
 		// TODO Auto-generated method stub
-		Customer cust=Framework.getCustomerByName(instr[1]);
+		String x=Framework.getNextInstruction();
+		Customer cust=Framework.getCustomerByName(x);
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID());
-		boolean checkedIn = false;
 		
-		if (instr[2] != null){
-			userRes.setStatus(2);
+		if(userRes.getGuaranteed()==0){
+			x=Framework.getNextInstruction();
+			cust.setCCType(x);
 			
-			cust.setCCType(instr[2]);
-			cust.setCCExpiration(instr[3]);
-			cust.setCCNumber(instr[4]);
+			x=Framework.getNextInstruction();
+			cust.setCCExpiration(x);
 			
-			checkedIn = true;
+			x=Framework.getNextInstruction();
+			cust.setCCNumber(x);
 		}
-		
-		else if(userRes.getGuaranteed()==0){
-
-			if (cust.getCCExpiration() == instr[3] && cust.getCCNumber() == instr[4]){
-				userRes.setStatus(2);	
-				checkedIn = true;
-			}
-		}
-		if (checkedIn) {
-			//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
-			int roomNum= Rooms.getEmpty(userRes.getRoomType());
-			Rooms.fillRoom(roomNum);
-			userRes.setRoomNumber(roomNum);
-		}
+		userRes.setStatus(2);
+		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
+		int roomNum= Rooms.getEmpty(userRes.getRoomType());
+		Rooms.fillRoom(roomNum);
+		userRes.setRoomNumber(roomNum);
 	}
 
 }
