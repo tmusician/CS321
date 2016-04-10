@@ -2,12 +2,13 @@ import java.util.ArrayList;
 
 public class Calendar {
 	private static int curDay=0;
-	private static ArrayList<Hotel> dayInfo=new ArrayList<Hotel>();
-	//2d array of signed in customers
+	private static ArrayList<Integer> dayRoomSingle=new ArrayList<Integer>();
+	private static ArrayList<Integer> dayRoomDouble=new ArrayList<Integer>();
 	
 	public static void init(){
 		for(int i=0; i<31; i++){
-			dayInfo.add(new Hotel());
+			dayRoomSingle.add(0);
+			dayRoomDouble.add(0);
 		}
 	}
 	
