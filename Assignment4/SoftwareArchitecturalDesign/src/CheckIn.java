@@ -1,15 +1,16 @@
-// business logic class used to check in a customer 
+
+
 public class CheckIn {
 
-	// checks in customer dictated by an instruction list
-	public static void checkIn(String[] instr) {
-		// initialize variables 
-		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
-		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
-		boolean checkedIn = false; // keeps track if customer has necessary information to check in
+	public static void run(String[] instr) {
+		// TODO Auto-generated method stub
+		Customer cust=Framework.getCustomerByName(instr[1]);
+		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID());
+		boolean checkedIn = false;
 		
-		// if a credit type is given then update the credit card information 
-		if (instr.length == 5){				// if instruction does not include 5 arguemtns, then no credit type was given (it's the only option value
+		if (instr[2] != null){
+			userRes.setStatus(2);
+			
 			cust.setCCType(instr[2]);
 			cust.setCCExpiration(instr[3]);
 			cust.setCCNumber(instr[4]);
@@ -17,20 +18,19 @@ public class CheckIn {
 			checkedIn = true;
 		}
 		
-		// if credit type is not given then check if reservation is guaranteed and compare credit information to the reservation
-		else if(instr.length == 4 && userRes.getGuaranteed()==0 && cust.getCCExpiration() == instr[instr.length - 2] && cust.getCCNumber() == instr[instr.length - 1])
+		else if(userRes.getGuaranteed()==0){
+
+			if (cust.getCCExpiration() == instr[3] && cust.getCCNumber() == instr[4]){
+				userRes.setStatus(2);	
 				checkedIn = true;
-		
-		// finish checking in the customer if they have provided sufficient information
+			}
+		}
 		if (checkedIn) {
-			userRes.setStatus(2); // change status of reservation to checked in
 			//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
 			int roomNum= Rooms.getEmpty(userRes.getRoomType());
 			Rooms.fillRoom(roomNum);
 			userRes.setRoomNumber(roomNum);
 		}
-		
-		// OUTPUT GOES HERE
 	}
 
 }
