@@ -67,6 +67,7 @@ public class MakeReservation {
 		newRes.setCustomerID(custID);
 		//can find cust by name, get cust id, then find reservation...  i think
 		int resID=Framework.storeReservation(newRes);
+		Calendar.addTo
 		return printStr;
 	}
 }
