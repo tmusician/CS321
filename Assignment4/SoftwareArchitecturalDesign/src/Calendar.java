@@ -2,27 +2,25 @@ import java.util.ArrayList;
 
 public class Calendar {
 	private static int curDay=0;
-	private static ArrayList<Integer> dayRoomSingle=new ArrayList<Integer>();
-	private static ArrayList<Integer> dayRoomDouble=new ArrayList<Integer>();
+	private static ArrayList<Day> dayInfo=new ArrayList<Day>();
 	
 	public static void init(){
 		for(int i=0; i<31; i++){
-			dayRoomSingle.add(0);
-			dayRoomDouble.add(0);
+			dayInfo.add(new Day());
 		}
 	}
 	
 	public static boolean checkDays(int start, int end, int roomType){
 		if(roomType==1){
-			for(int i=0; i<end-start; i++){
-				if(dayRoomSingle.get(start+i)==Framework.NUM_SINGLE_ROOMS){
+			for(int i=0; i<=end-start; i++){
+				if(dayInfo.get(start+i).getSingAvail()==0){
 					return false;
 				}
 			}
 		}
 		else if(roomType==2){
-			for(int i=0; i<end-start; i++){
-				if(dayRoomDouble.get(start+i)==Framework.NUM_DOUBLE_ROOMS){
+			for(int i=0; i<=end-start; i++){
+				if(dayInfo.get(start+i).getDoubAvail()==0){
 					return false;
 				}
 			}
@@ -32,15 +30,14 @@ public class Calendar {
 	
 	public static boolean addReservation(int start, int end, int type){
 		if(type==1){
-			for(int i=0; i<end-start; i++){
-				int temp=dayRoomSingle.get(start+i);
-				dayRoomSingle.set(start+i, temp+1);
+			for(int i=0; i<=end-start; i++){
+				dayInfo.get(start+i).decSingAvail();;
+	
 			}
 		}
 		else if(type==2){
-			for(int i=0; i<end-start; i++){
-				int temp=dayRoomDouble.get(start+i);
-				dayRoomDouble.set(start+i, temp+1);
+			for(int i=0; i<=end-start; i++){
+				dayInfo.get(start+i).decDoubAvail();
 			}
 		}
 		return true;
