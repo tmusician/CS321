@@ -12,7 +12,7 @@ public class ReservationSystem{
 					String[] instructions=Framework.nextInstruction();
 					int next = instructions[0];
 					switch(next){
-						case 1: //call  make reservation
+						case 1: MakeReservation.run()
 								break;
 						case 2: //call check in
 								break;
