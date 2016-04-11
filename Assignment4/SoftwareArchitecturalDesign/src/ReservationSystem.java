@@ -1,3 +1,5 @@
+import java.util.*;
+import java.io.*;
 public class ReservationSystem{
 	public static void main(String[] args){
 		//need calander for day
@@ -7,7 +9,7 @@ public class ReservationSystem{
 			Rooms.init();
 			while(Framework.hasNextInstruction){
 					String[] instructions=Framework.nextInstruction();
-					int next=Integer.parseInt(instructions[0]);
+					int next = instructions[0];
 					switch(next){
 						case 1: //call  make reservation
 								break;
@@ -27,6 +29,11 @@ public class ReservationSystem{
 		catch(Exception IOException){
 			System.out.println("No such file found");
 		}
+	}
+	
+	public void print_to_Log(String send_to_log){
+		
+		
 	}
 	
 }
