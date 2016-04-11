@@ -32,7 +32,7 @@ public class ReservationSystem{
 	}
 	
 	public void print_to_Log(String send_to_log){
-		
+		PrintWriter pw = new PrintWriter()
 		
 	}
 	
