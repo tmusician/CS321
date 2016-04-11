@@ -7,6 +7,7 @@ public class CheckIn {
 		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
 		boolean checkedIn = false; // keeps track if customer has necessary information to check in
+		String output = "";
 		
 		// if a credit type is given then update the credit card information 
 		if (instr.length == 5){				// if instruction does not include 5 arguemtns, then no credit type was given (it's the only option value
@@ -28,9 +29,22 @@ public class CheckIn {
 			int roomNum= Rooms.getEmpty(userRes.getRoomType());
 			Rooms.fillRoom(roomNum);
 			userRes.setRoomNumber(roomNum);
+			Report.incOccupancy();
+			
+			output = output + cust.getName() + " was successfully checked in.\n\nCheck In Statement:" +
+				"\nCustomer Name: " + cust.getName() + "\nCustomer Address: " + cust.getAddress() +
+				"\nRoom Type: " + res.getRoomType() + "\nNights Reserved: " + 
+				res.getEndDate() - res.getStartDate() + "\nNightlyRate: " + 
+				(res.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE + "\nCheck In: " + 
+				res.getStartDate() + "\nCheck Out: " + res.getEndDate();
+		}
+		else {
+			output = output + cust.getName() + " was not successfully checked in.";
 		}
 		
 		// OUTPUT GOES HERE
+		
+		return output;
 	}
 
 }
