@@ -12,11 +12,11 @@ public class ReservationSystem{
 					String[] instructions=Framework.nextInstruction();
 					int next = instructions[0];
 					switch(next){
-						case 1: MakeReservation.run(instructions);
+						case 1: pw.print(MakeReservation.run(instructions));
 								break;
-						case 2: CheckIn.checkIn(instructions);
+						case 2: pw.print(CheckIn.checkIn(instructions));
 								break;
-						case 3: CheckOut.checkOut(instructions);
+						case 3: pw.print(CheckOut.checkOut(instructions));
 								break;
 						case 4: //call print management report
 								break;
@@ -31,10 +31,6 @@ public class ReservationSystem{
 		catch(Exception IOException){
 			System.out.println("No such file found");
 		}
-	}
-	
-	public void print_to_Log(String send_to_log){
-		pw.print(send_to_log);
 	}
 	
 }
