@@ -12,11 +12,11 @@ public class ReservationSystem{
 					String[] instructions=Framework.nextInstruction();
 					int next = instructions[0];
 					switch(next){
-						case 1: MakeReservation.run()
+						case 1: MakeReservation.run(instructions);
 								break;
-						case 2: //call check in
+						case 2: CheckIn.checkIn(instructions);
 								break;
-						case 3: //call check out
+						case 3: CheckOut.checkOut(instructions);
 								break;
 						case 4: //call print management report
 								break;
