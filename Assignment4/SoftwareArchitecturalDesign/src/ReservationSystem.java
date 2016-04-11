@@ -5,6 +5,7 @@ public class ReservationSystem{
 		//need calander for day
 		try{
 			Framework.init(args[0]);
+			PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
 			Calendar.init();
 			Rooms.init();
 			while(Framework.hasNextInstruction){
@@ -25,6 +26,7 @@ public class ReservationSystem{
 								break;
 					}
 			}
+			pw.close;
 		}
 		catch(Exception IOException){
 			System.out.println("No such file found");
@@ -32,8 +34,7 @@ public class ReservationSystem{
 	}
 	
 	public void print_to_Log(String send_to_log){
-		PrintWriter pw = new PrintWriter()
-		
+		pw.print(send_to_log);
 	}
 	
 }
