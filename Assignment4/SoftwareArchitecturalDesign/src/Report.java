@@ -1,6 +1,5 @@
 public static Report{
   
-  private int day;
   private int income;
   private int Occupancy;
   
@@ -13,7 +12,11 @@ public static Report{
   
   public static void incIncome(int inc){ this.income += inc; }
   
-  //day change.
+  public static void day_change(){
+    this.income = 0;
+  }
+  
+  
   
   
 }
