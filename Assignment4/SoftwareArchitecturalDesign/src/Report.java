@@ -1,11 +1,11 @@
 public static Report{
   
-  private int income;
-  private int Occupancy;
+  private static int income;
+  private static int Occupancy;
   
   public static void main(String[] args){
-    
-    
+    this.income = 0;
+    this.Occupancy = 0;
   }
   
   public static void incOccupancy(){ this.Occupancy++; }
