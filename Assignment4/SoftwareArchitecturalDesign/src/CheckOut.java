@@ -8,11 +8,13 @@ public class CheckOut {
 		//update the money based on start_Date and end_date rates (rate differs by single and double rates)
 		//charge credit card
 		int days = end_Date - start_Date;
+		int rate = userRes.getRoomType(); //single_rate or double_rate
 		int charge = days * rate;
 		//check card through proxy
-		proxy(charge);
+		if(proxy(charge) == false){
+			return false;
+		}
 		UserRes.chargeCard(charge);
-		
 		
 		userRes.setStatus(1); // change status of reservation to checked out
 		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
