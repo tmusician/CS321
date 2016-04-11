@@ -9,7 +9,10 @@ public class CheckOut {
 		//charge credit card
 		int days = end_Date - start_Date;
 		int charge = days * rate;
+		//check card through proxy
+		proxy(charge);
 		UserRes.chargeCard(charge);
+		
 		
 		userRes.setStatus(1); // change status of reservation to checked out
 		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
