@@ -1,3 +1,5 @@
+import java.lang.reflect.Proxy;
+
 public class MakeReservation {
 	public static String run(String [] list){
 		boolean success=true; 
@@ -31,10 +33,6 @@ public class MakeReservation {
 			return printStr;
 		}
 		//handle what to do no idea where to print errors too, could just ignore rest and iterate till next thing
-		Calendar.addReservation(startDate, stopDate, roomType);
-		newRes.setStartDate(startDate);
-		newRes.setEndDate(stopDate);
-		newRes.setRoomType(roomType);
 	
 		x=list[6];
 		int numOccs=Integer.parseInt(x);
@@ -45,6 +43,10 @@ public class MakeReservation {
 		newRes.setGuaranteed(guaranteed);
 		
 		if(guaranteed==1){
+			if(!Proxy(list[10], list[9])){
+				printStr=printStr+"Reservation failed\n";
+				return printStr;
+			}
 			printStr=printStr+"Guaranteed: True\n";
 			
 			x=list[8];
@@ -60,6 +62,11 @@ public class MakeReservation {
 		else{
 			printStr=printStr+"Guaranteed: False\n";
 		}
+		Calendar.addReservation(startDate, stopDate, roomType);
+		newRes.setStartDate(startDate);
+		newRes.setEndDate(stopDate);
+		newRes.setRoomType(roomType);
+		
 		printStr=printStr+"Check In: "+"January "+startDate+", 2015\n";
 		printStr=printStr+"Check Out: "+"January "+stopDate+", 2015\n";
 		//customer ID and Res ID
