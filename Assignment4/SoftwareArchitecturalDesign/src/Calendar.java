@@ -11,6 +11,9 @@ public class Calendar {
 	}
 	
 	public static boolean checkDays(int start, int end, int roomType){
+		if(start>end){
+			return false;
+		}
 		if(roomType==1){
 			for(int i=0; i<=end-start; i++){
 				if(dayInfo.get(start+i).getSingAvail()==0){
