@@ -18,7 +18,7 @@ public class ReservationSystem{
 								break;
 						case 3: pw.print(CheckOut.checkOut(instructions));
 								break;
-						case 4: //call print management report
+						case 4: pw.print(PrintManagementReport.viewReport(instructions));
 								break;
 						case 5: //day change
 								break;
