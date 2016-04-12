@@ -10,6 +10,8 @@ public static Report{
   
   public static void incOccupancy(){ this.Occupancy++; }
   
+  public static void decOccupancy(){ this.Occupancy--; }
+  
   public static void incIncome(int inc){ this.income += inc; }
   
   public static void day_change(){
