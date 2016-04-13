@@ -20,9 +20,9 @@ public class ReservationSystem{
 								break;
 						case 4: pw.print(PrintManagementReport.viewReport(instructions));
 								break;
-						case 5: //day change
+						case 5: pw.print(DayChange.change_day(instructions));
 								break;
-						case 6: //6pm alarm
+						case 6: pw.print(SixPMAlarm.run(instructions));
 								break;
 					}
 			}
