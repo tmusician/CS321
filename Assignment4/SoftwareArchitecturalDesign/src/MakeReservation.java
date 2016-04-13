@@ -1,5 +1,3 @@
-import java.lang.reflect.Proxy;
-
 public class MakeReservation {
 	public static String run(String [] list){
 		boolean success=true; 
@@ -62,7 +60,7 @@ public class MakeReservation {
 		else{
 			printStr=printStr+"Guaranteed: False\n";
 		}
-		Calendar.addReservation(startDate, stopDate, roomType);
+		
 		newRes.setStartDate(startDate);
 		newRes.setEndDate(stopDate);
 		newRes.setRoomType(roomType);
@@ -74,6 +72,7 @@ public class MakeReservation {
 		newRes.setCustomerID(custID);
 		//can find cust by name, get cust id, then find reservation...  i think
 		int resID=Framework.storeReservation(newRes);
+		Calendar.addReservation(startDate, stopDate, roomType, resID);
 		return printStr;
 	}
 }

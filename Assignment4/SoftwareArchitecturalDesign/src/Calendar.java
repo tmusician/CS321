@@ -34,7 +34,7 @@ public class Calendar {
 		return true;
 	}
 	
-	public static boolean addReservation(int start, int end, int type){
+	public static boolean addReservation(int start, int end, int type, int resID){
 		if(type==1){
 			for(int i=0; i<=end-start; i++){
 				dayInfo.get(start+i).decSingAvail();
@@ -43,8 +43,10 @@ public class Calendar {
 		else if(type==2){
 			for(int i=0; i<=end-start; i++){
 				dayInfo.get(start+i).decDoubAvail();
+				
 			}
 		}
+		dayInfo.get(start).addReservation(resID);
 		return true;
 	}
 	
