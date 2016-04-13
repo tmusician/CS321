@@ -1,7 +1,7 @@
 
 public class SixPmAlarm {
 
-	public static void run(String[] args) {
+	public static String run(String[] args) {
 		// TODO Auto-generated method stub
 		
 	}
