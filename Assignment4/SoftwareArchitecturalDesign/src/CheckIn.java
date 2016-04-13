@@ -29,7 +29,8 @@ public class CheckIn {
 			int roomNum= Rooms.getEmpty(userRes.getRoomType());
 			Rooms.fillRoom(roomNum);
 			userRes.setRoomNumber(roomNum);
-			Report.incOccupancy();
+			if(userRes.getRoomType()==1){Report.inc_SR_Occupancy();}  //**changed by krishna
+			else{Report.inc_DR_Occupancy();}                          //**changed by krishna 
 			
 			output = output + cust.getName() + " was successfully checked in.\n\nCheck In Statement:" +
 				"\nCustomer Name: " + cust.getName() + "\nCustomer Address: " + cust.getAddress() +
