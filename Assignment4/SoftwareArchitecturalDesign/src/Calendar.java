@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Calendar {
-	private static int curDay=0;
+	private static int curDay=1;
 	private static ArrayList<Day> dayInfo=new ArrayList<Day>();
 	
 	public static void init(){
@@ -12,6 +12,9 @@ public class Calendar {
 	
 	public static boolean checkDays(int start, int end, int roomType){
 		if(start>end){
+			return false;
+		}
+		if(start<curDay || end>31){
 			return false;
 		}
 		if(roomType==1){
@@ -48,6 +51,9 @@ public class Calendar {
 	public static int nextDay(){
 		curDay++;
 		return curDay;
+	}
+	public static Day getInfo(){
+		return dayInfo.get(curDay);
 	}
 }
 
