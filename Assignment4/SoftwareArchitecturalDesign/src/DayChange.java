@@ -1,7 +1,7 @@
 
 public class DayChange {
 
-	public static void run(String[] args) {
+	public static String change_day(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
