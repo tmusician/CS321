@@ -18,6 +18,11 @@ public static Report{
   
   public static void incIncome(int inc){ this.income += inc; }
   
+  public static int get_SR_Occupancy(){ return this.SR_Occupancy; }
+  public static int get_DR_Occupancy(){ return this.DR_Occupancy; }
+  
+  public static int get_income(){ return this.income; }
+  
   public static void day_change(){
     this.income = 0;
   }
