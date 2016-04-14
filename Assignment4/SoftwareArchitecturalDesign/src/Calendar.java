@@ -57,5 +57,9 @@ public class Calendar {
 	public static Day getInfo(){
 		return dayInfo.get(curDay);
 	}
+	
+	public static int get_cur_Day(){
+		return this.curDay;
+	}
 }
 
