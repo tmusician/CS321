@@ -1,5 +1,6 @@
 public class MakeReservation {
 	public static String run(String [] list){
+		
 		boolean success=true; 
 		String printStr="Make Reservation request for";
 		String x=list[1];
@@ -23,15 +24,17 @@ public class MakeReservation {
 		if(!Calendar.checkDays(startDate,stopDate,roomType)){
 			success=false;
 		}
+		//if succeed the check 
 		if(success){
 			printStr=printStr+"Reservation: Success\n";
 		}
+		//if check failed, returned that it failed
 		else{
 			printStr=printStr+"Reservation failed\n";
 			return printStr;
 		}
-		//handle what to do no idea where to print errors too, could just ignore rest and iterate till next thing
-	
+		
+		//update newRes
 		x=list[6];
 		int numOccs=Integer.parseInt(x);
 		newRes.setNumOccupants(numOccs);
@@ -40,6 +43,7 @@ public class MakeReservation {
 		int guaranteed=Integer.parseInt(x);
 		newRes.setGuaranteed(guaranteed);
 		
+		//check guaranteed
 		if(guaranteed==1){
 			if(!Proxy(list[10], list[9])){
 				printStr=printStr+"Reservation failed\n";
@@ -60,7 +64,7 @@ public class MakeReservation {
 		else{
 			printStr=printStr+"Guaranteed: False\n";
 		}
-		
+		//more addition to reservation
 		newRes.setStartDate(startDate);
 		newRes.setEndDate(stopDate);
 		newRes.setRoomType(roomType);
@@ -70,8 +74,9 @@ public class MakeReservation {
 		//customer ID and Res ID
 		int custID=Framework.storeCustomer(newCust);
 		newRes.setCustomerID(custID);
-		//can find cust by name, get cust id, then find reservation...  i think
+		
 		int resID=Framework.storeReservation(newRes);
+		//finally add reservation since everything has passed
 		Calendar.addReservation(startDate, stopDate, roomType, resID);
 		return printStr;
 	}
