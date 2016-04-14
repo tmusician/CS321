@@ -5,11 +5,12 @@ public class CheckOut {
 		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
 		boolean checkedOut = false; // keeps track if customer has necessary information to check out
+		String output = "";
 
 		//update the money based on start_Date and end_date rates (rate differs by single and double rates)
 		//charge credit card
 		int days = userRes.getEndDate() - userRes.getStartDate();
-		int rate = userRes.getRoomType(); //single_rate or double_rate
+		int rate = (userRes.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE; //single_rate or double_rate
 		int charge = days * rate;
 		//check card through proxy
 		if(Proxy.validate(cust.ccNumber) == false){
@@ -19,7 +20,7 @@ public class CheckOut {
 		//	UserRes.chargeCard(charge);
 		}
 		
-		userRes.setStatus(1); // change status of reservation to checked out
+
 		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
 		int roomNum = userRes.getRoomNumber();
 		Rooms.emptyRoom(roomNum);
@@ -29,9 +30,8 @@ public class CheckOut {
 		Report.dec_Occupancy();
 		//report.addRevenue(charge);
 		
-				// if credit type is not given then check if reservation is guaranteed and compare credit information to the reservation
-		else if(instr.length == 4 && userRes.getGuaranteed()==0 && cust.getCCExpiration() == instr[instr.length - 2] && cust.getCCNumber() == instr[instr.length - 1])
-				checkedOut = true;
+		userRes.setStatus(1); // change status of reservation to checked out
+		checkedOut = true;
 		
 		// finish checking in the customer if they have provided sufficient information
 		if (checkedOut) {
