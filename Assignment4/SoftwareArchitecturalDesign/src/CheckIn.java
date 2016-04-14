@@ -24,7 +24,7 @@ public class CheckIn {
 		
 		// finish checking in the customer if they have provided sufficient information
 		if (checkedIn) {
-			userRes.setStatus(2); // change status of reservation to checked in
+			userRes.setStatus(2); // change status of reservation to checked in                                    ////!!!!!!!!!!!!!!!!!!!!!!!!!!
 			//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
 			int roomNum= Rooms.getEmpty(userRes.getRoomType());
 			Rooms.fillRoom(roomNum);
