@@ -5,9 +5,10 @@ public class ReservationSystem{
 		//need calander for day
 		try{
 			Framework.init(args[0]);
-			PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
 			Calendar.init();
 			Rooms.init();
+			PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
+			pw.append("==================January "+Calendar.get_cur_Day()+", 2016==================");
 			while(Framework.hasNextInstruction){
 					String[] instructions=Framework.nextInstruction();
 					int next = instructions[0];

@@ -7,7 +7,7 @@ public class DayChange {
 		//print no show guranteed reservations.
 		Report.day_change();
 		Calendar.nextDay();
-		op.append("==================January "+Calendar.get_cur_Day()+", 2015==================");
+		op.append("==================January "+Calendar.get_cur_Day()+", 2016==================");
 		
 		return op.toString();
 	}
