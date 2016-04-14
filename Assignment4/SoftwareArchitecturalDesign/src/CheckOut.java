@@ -1,6 +1,6 @@
 public class CheckOut {
 
-	public static void checkOut(String[] instr) {
+	public static String checkOut(String[] instr) {
 		//initalize variables
 		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
@@ -12,7 +12,7 @@ public class CheckOut {
 		int charge = days * rate;
 		//check card through proxy
 		if(proxy(charge) == false){
-			return false;
+			return "Invalid Card.";
 		}
 		UserRes.chargeCard(charge);
 		
