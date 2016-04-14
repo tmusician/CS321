@@ -4,28 +4,49 @@ public class CheckOut {
 		//initalize variables
 		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
+		boolean checkedOut = false; // keeps track if customer has necessary information to check out
 
 		//update the money based on start_Date and end_date rates (rate differs by single and double rates)
 		//charge credit card
-		int days = end_Date - start_Date;
+		int days = userRes.getEndDate() - userRes.getStartDate();
 		int rate = userRes.getRoomType(); //single_rate or double_rate
 		int charge = days * rate;
 		//check card through proxy
-		if(proxy(charge) == false){
+		if(Proxy.validate(cust.ccNumber) == false){
 			return "Invalid Card.";
 		}
-		UserRes.chargeCard(charge);
+		else{
+		//	UserRes.chargeCard(charge);
+		}
 		
 		userRes.setStatus(1); // change status of reservation to checked out
 		//assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
-		roomNum = userRes.getRoomNumber();
+		int roomNum = userRes.getRoomNumber();
 		Rooms.emptyRoom(roomNum);
 		userRes.emptyRoom(roomNum);
 		
 		//update Report to free the room and add money to report object
-		report.decrementOccupancy(0);
-		report.addRevenue(charge);
+		Report.dec_Occupancy();
+		//report.addRevenue(charge);
 		
-		// OUTPUT GOES HERE
+				// if credit type is not given then check if reservation is guaranteed and compare credit information to the reservation
+		else if(instr.length == 4 && userRes.getGuaranteed()==0 && cust.getCCExpiration() == instr[instr.length - 2] && cust.getCCNumber() == instr[instr.length - 1])
+				checkedOut = true;
+		
+		// finish checking in the customer if they have provided sufficient information
+		if (checkedOut) {
+			Reservation res = userRes;
+			output = output + cust.getName() + " was successfully checked out.\n\nCheckout Statement:" +
+				"\nCustomer Name: " + cust.getName() + "\nCustomer Address: " + cust.getAddress() +
+				"\nRoom Type: " + res.getRoomType() + "\nNights Reserved: " + 
+				res.getEndDate() - res.getStartDate() + "\nCharge per night: " + 
+				(res.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE + "\nAmount payable: " + 
+				(res.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE;
+		}
+		else {
+			output = output + cust.getName() + " was not successfully checked out.";
+		}		
+		
+		return output;
 	}
 }
