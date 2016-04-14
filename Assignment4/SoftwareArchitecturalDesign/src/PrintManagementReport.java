@@ -1,10 +1,12 @@
 
 public class PrintManagementReport {
 	
-	public static String viewReport(String[] args) {
-	
-		int date = args[1];
+	int date = args[1];
 		//compare date against current day.
+	
+	public static String makeReport_curDay(String[] args) {
+	
+		
 		
 		Day cur = Calendar.getInfo();      //need to get DATE!
 		
