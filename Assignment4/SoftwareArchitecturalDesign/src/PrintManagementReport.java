@@ -13,7 +13,7 @@ public class PrintManagementReport {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("Management Report for 1/"+Calendar.get_cur_Day()+"/2015:\n");                                       //Add DATE here!!!!!!
+		sb.append("Management Report for 1/"+Calendar.get_cur_Day()+"/2016:\n");                                       //Add DATE here!!!!!!
 		sb.append("Number of Reservations: "+(num_SR_reserved+num_DR_reserved)+"\n");
 		sb.append("Single Rooms Reserved: "+ num_SR_reserved +"\n");
 		sb.append("Double Rooms Reserved: "+ num_DR_reserved +"\n");
