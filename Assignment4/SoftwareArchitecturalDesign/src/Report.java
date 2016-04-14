@@ -1,25 +1,19 @@
 public static Report{
   
   private static int income;
-  private static int SR_Occupancy;
-  private static int DR_Occupancy;
+  private static int Occupancy;
   
   public static void main(String[] args){
     this.income = 0;
-    this.SR_Occupancy = 0;
-    this.DR_Occupancy = 0;
+    this.Occupancy = 0;
   }
   
-  public static void inc_SR_Occupancy(){ this.SR_Occupancy++; }
-  public static void dec_SR_Occupancy(){ this.SR_Occupancy--; }
-  
-  public static void inc_DR_Occupancy(){ this.DR_Occupancy--; }
-  public static void dec_DR_Occupancy(){ this.DR_Occupancy--; }
+  public static void inc_Occupancy(){ this.Occupancy++; }
+  public static void dec_Occupancy(){ this.Occupancy--; }
   
   public static void incIncome(int inc){ this.income += inc; }
   
-  public static int get_SR_Occupancy(){ return this.SR_Occupancy; }
-  public static int get_DR_Occupancy(){ return this.DR_Occupancy; }
+  public static int get_Occupancy(){ return this.Occupancy; }
   
   public static int get_income(){ return this.income; }
   
