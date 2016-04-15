@@ -1,3 +1,23 @@
+/*
+Information Hiding Class: CheckIn 
+Author: Eric Miller
+Information Hidden: Encapsulates Customer, Reservation, Room, Calendar, and Report attributes
+and their current values
+Class structuring criterion: Data abstraction class
+Assumptions: customer name, credit card type, number, and expiration date are included in a list of strings 
+Anticipated changes:
+Superclass: none
+Inherited operations: none
+Operations provided:
+checkIn(String[] instr)
+  Function: compares customer credit card information to the reservation credit card information and updates status of reservation
+  Precondition: Customer and Reservation exist for the given customer name.
+  Postcondition: Customer is either checked in or denied.
+  Input Parameters: instr: a list of strings that form a instruction message for check in, which include instuction type, customer name, 
+    credit card type, credit card number, and credit card expiration
+*/
+
+
 // business logic class used to check in a customer 
 public class CheckIn {
 
