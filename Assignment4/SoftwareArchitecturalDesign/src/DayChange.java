@@ -14,6 +14,7 @@ public class DayChange {
 				//no show condition.
 				Customer no_show = Framework.getCustomerByID(temp.getCustomerID());
 				op.append(no_show.getName()+" did not show.\n");
+				temp.setStatus(Framework.STATUS_NO_SHOW);
 			} continue;
 		}
 		
