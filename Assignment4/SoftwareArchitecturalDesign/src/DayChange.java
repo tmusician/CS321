@@ -1,3 +1,19 @@
+/* CLASS INTERFACE SPECIFICATION
+ * 
+ * Information hiding class: DayChange;
+ * Author: Krishna Kanakapua.
+ * 
+ * Operations Provided:
+ * 
+ *  -change_day:
+ *    -function: -critical object that is responsible for simulating day change.
+ *               -cancels all of todays no show guaranteed reservations.
+ *               - initiates day change in report and calendar.
+ *    -precondition: system has been initiated.
+ *    -postcondition: succesful and coherent day change occurs throughout the system.
+ *    -input parameters: none
+ *    -output parameters: none
+ */
 import java.util.*;
 public class DayChange {
 
