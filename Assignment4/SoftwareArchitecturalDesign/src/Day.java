@@ -81,7 +81,7 @@ public class Day {
  // add a new reservation by ID
  public void addReservation(int resID) {
   this.resIDs.add(resID);
-  Reservation res = getReservationByID(resID);
+  Reservation res = Framework.getReservationByID(resID);
   if (res.getRoomType() == 1)
    this.incSingAvail();
   else
@@ -91,7 +91,7 @@ public class Day {
  // remove a reservation by ID
  public void removeReservation(int resID) {
   this.resIDs.remove(resID);
-  Reservation res = getReservationByID(resID);
+  Reservation res = Framework.getReservationByID(resID);
   if (res.getRoomType() == 1)
    this.decSingAvail();
   else
