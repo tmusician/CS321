@@ -80,18 +80,21 @@ public class Day {
 	// add a new reservation by ID
 	public void addReservation(int resID) {
 		this.resIDs.add(resID);
-		updateRoomsAvail();
+		Reservation res = getReservationByID(resID);
+		if (res.getRoomType() == 1)
+			this.incSingAvail();
+		else
+			this.incDoubAvail();
 	}
 	
 	// remove a reservation by ID
 	public void removeReservation(int resID) {
 		this.resIDs.remove(resID);
-		updateRoomsAvail();
+		Reservation res = getReservationByID(resID);
+		if (res.getRoomType() == 1)
+			this.decSingAvail();
+		else
+			this.decDoubAvail();
 	}
-	
-	// updates number of rooms available based on current reservation IDs room types
-	private void updateRoomsAvail(){
-	
-	}
-	
+
 }
