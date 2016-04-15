@@ -34,8 +34,8 @@ public class CheckIn {
    output = output + cust.getName() + " was successfully checked in.\n\nCheck In Statement:" +
     "\nCustomer Name: " + cust.getName() + "\nCustomer Address: " + cust.getAddress() +
     "\nRoom Type: " + userRes.getRoomType() + "\nNights Reserved: " + 
-    userRes.getEndDate() - userRes.getStartDate() + "\nNightlyRate: " + 
-    (userRes.getRoomType() == 1)?Framework.SINGLE_RATE:Framework.DOUBLE_RATE + "\nCheck In: " + 
+    (userRes.getEndDate() - userRes.getStartDate()) + "\nNightlyRate: " + 
+    ((userRes.getRoomType() == 1)?Framework.SINGLE_RATE:Framework.DOUBLE_RATE) + "\nCheck In: " + 
     userRes.getStartDate() + "\nCheck Out: " + userRes.getEndDate();
   }
   else {
