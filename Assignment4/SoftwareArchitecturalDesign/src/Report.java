@@ -1,3 +1,10 @@
+/* CLASS INTERFACE SPECIFICATION: 
+ * Information Hiding Class : Report:
+ * Operations Provided:
+ *  -increment and decrement total Occupancy of the Hotel.
+ *  -Create management report for current day and store it.
+ 
+ */
 import java.util.*;
 public class Report{
   
