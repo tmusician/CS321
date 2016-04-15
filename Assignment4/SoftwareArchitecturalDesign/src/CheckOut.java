@@ -39,9 +39,9 @@ public class CheckOut {
    output = output + cust.getName() + " was successfully checked out.\n\nCheckout Statement:" +
     "\nCustomer Name: " + cust.getName() + "\nCustomer Address: " + cust.getAddress() +
     "\nRoom Type: " + res.getRoomType() + "\nNights Reserved: " + 
-    res.getEndDate() - res.getStartDate() + "\nCharge per night: " + 
-    (res.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE + "\nAmount payable: " + 
-    (res.getRoomType() == 1)?Framework.SINGLE_RATE:DOUBLE_RATE;
+    (res.getEndDate() - res.getStartDate()) + "\nCharge per night: " + 
+    ((res.getRoomType() == 1)?Framework.SINGLE_RATE:Framework.DOUBLE_RATE) + "\nAmount payable: " + 
+    ((res.getRoomType() == 1)?Framework.SINGLE_RATE:Framework.DOUBLE_RATE);
   }
   else {
    output = output + cust.getName() + " was not successfully checked out.";
