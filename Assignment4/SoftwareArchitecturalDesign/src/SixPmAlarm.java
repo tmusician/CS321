@@ -1,3 +1,14 @@
+/*
+ Information Hiding Class: SixPmAlarm 
+ Author: Sean Gamble
+ Operations provided:
+   run(String[] args)
+     Function: cancels non guaranteed reservations and charge noshows. 
+     Precondition: Calendar has been init
+     Input Parameters: None
+     Post Condition: Reservations are charged if noshows and removed
+     Output parameters: String of canceled reservations
+*/
 import java.util.*;
 public class SixPmAlarm {
 
