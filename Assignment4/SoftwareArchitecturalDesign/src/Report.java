@@ -3,8 +3,12 @@
  * Author: Krishna Kanakapura.
  * Operations Provided:
  *  -increment and decrement total Occupancy of the Hotel.
- *  -Create management report for current day and store it.
- 
+ *  -makeReport_curDay():
+ *   -function: create and store the management report for today.
+ *   -precondition:System is functional and running.
+ *   -postcondition:A report has been created successfully.
+ *   -input parameters: int date.
+ *   -output parameters: String report.
  */
 import java.util.*;
 public class Report{
