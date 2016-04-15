@@ -1,13 +1,16 @@
 /*
 Information Hiding Class: ReservationSystem
 Author: Krishna Kanakapura.
+
 Operations provided:
+
 main(String[] args)
- Function: entrance point for the program. Reads instructions from a file and passes the instructions the business logic classes
- Input Parameters : args: command line arguments
-	Output Parameters : none
-	Precondition: none
-	Postcondition: program has completed 
+ -Function: Instantiation point for the system. Reads instructions from a file and passes the instructions 
+            to respective business logic classes.
+ -Input Parameters : args: command line arguments
+ -Output Parameters : Strings responses from business logic objects.
+ -Precondition: none
+ -Postcondition: program has completed successfully.
 */
 
 import java.util.*;
