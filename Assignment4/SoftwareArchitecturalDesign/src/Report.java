@@ -1,5 +1,5 @@
 import java.util.*;
-public static Report{
+public class static Report{
   
   private static int income;
   private static int Occupancy;
