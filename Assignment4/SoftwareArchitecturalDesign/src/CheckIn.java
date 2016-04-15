@@ -2,7 +2,7 @@
 public class CheckIn {
 
 	// checks in customer dictated by an instruction list
-	public static void checkIn(String[] instr) {
+	public static String checkIn(String[] instr) {
 		// initialize variables 
 		Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
 		Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
