@@ -27,13 +27,13 @@ public class CheckOut {
   //assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
   int roomNum = userRes.getRoomNumber();
   Rooms.emptyRoom(roomNum);
-  userRes.emptyRoom(roomNum);
+  //userRes.emptyRoom(roomNum);
   
   //update Report to free the room and add money to report object
   Report.dec_Occupancy();
   //report.addRevenue(charge);
   
-  userRes.setStatus(1); // change status of reservation to checked out
+  userRes.setStatus(Framework.STATUS_CHECKED_OUT); // change status of reservation to checked out
   checkedOut = true;
   
   // finish checking in the customer if they have provided sufficient information
