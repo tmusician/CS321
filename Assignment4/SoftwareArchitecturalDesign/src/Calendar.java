@@ -1,4 +1,4 @@
-/*Information Hiding Class: MakeReservation
+/*Information Hiding Class: Calendar
  Author: Sean Gamble
 Operations Provided:
   1) init()
