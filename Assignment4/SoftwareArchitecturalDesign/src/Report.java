@@ -1,5 +1,5 @@
 import java.util.*;
-public class static Report{
+public class Report{
   
   private static int income;
   private static int Occupancy;
@@ -21,7 +21,7 @@ public class static Report{
   public static int get_income(){ return this.income; }
   
   public static void day_change(){
-	this.History.put(Calendar.get_cur_Day,makeReport_curDay())
+	this.History.put(Calendar.get_cur_Day,makeReport_curDay());
     this.income = 0;
   }
   
@@ -38,7 +38,7 @@ public class static Report{
 	sb.append("Number of Reservations: "+(num_SR_reserved+num_DR_reserved)+"\n");
 	sb.append("Single Rooms Reserved: "+ num_SR_reserved +"\n");
 	sb.append("Double Rooms Reserved: "+ num_DR_reserved +"\n");
-	sb.append("Occupancy Rate:"+int((this.Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100)+"\n");
+	sb.append("Occupancy Rate:"+String.format("%2d",((this.Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100))+"\n");
 	sb.append("Total Revenue: $"+String.format("%0.2d",(double)this.get_income())+"\n");
 	
 	return sb.toString();
