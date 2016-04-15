@@ -1,4 +1,14 @@
 public class CheckOut {
+ /*Information Hiding Class: CheckOut
+ Author: Trenton Eliopoulos
+ Operations provide:
+   Checkout(String name)
+      Function: Check out customer
+      Preconditon: Customer has been checked in
+      Input Parameters: name: name of customer
+      Post Condition: customer is checked out
+      Output parameters: Relevant information to the checkout
+      */
 
  public static String checkOut(String[] instr) {
   //initalize variables
