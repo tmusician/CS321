@@ -1,3 +1,33 @@
+/*
+Information Hiding Class: Rooms
+Author: Trenton Eliopoulos 
+Operations:
+init()
+ Function: initializes all fields
+ Input Parameters: none
+ Output Parameters: none
+ Precondition: none
+ Postcondition: all fields have values.
+fillRoom(int roomNum)
+ Function: adds room number to list of rooms in use by its room type
+ Input Parameters: roomNum: a number representing the room
+ Output Parameters: none
+ Precondition: room is not already filled
+ Postcondition: room has been added to the proper list
+emptyRoom(int roomNum)
+ Function: removes room number from list of rooms in use by its room type
+ Input Parameters: roomNum: a number representing the room
+ Output Parameters: none
+ Precondition: room is already filled
+ Postcondition: room has been removed to the proper list	
+getEmpty(int roomType)
+ Function: retrieves a room that is not filled
+ Input Parameters: roomType: a number representing the either single or double room type
+ Output Parameters: int roomNum: the number of a room that is not filled
+ Precondition: fields have been initialized
+ Postcondition: none
+*/
+
 import java.util.ArrayList;
 
 //hold what rooms are in use
