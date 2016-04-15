@@ -3,7 +3,7 @@ public class PrintManagementReport {
 	
 	public static String viewReport(String[] input){
 		
-		int given_date = int(input[1]);
+		int given_date = (int)input[1];
 		
 		if (given_date == Calendar.get_cur_Day()){
 			return Report.makeReport_curDay();
