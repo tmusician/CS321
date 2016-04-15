@@ -1,9 +1,16 @@
 /* CLASS INTERFACE SPECIFICATION.
+ * 
  * Information hiding class : PrintManagementReport
  * Author: Krishna Kanakapura.
- * Operations Provided:
- *  -Display management report for a valid date.
  * 
+ * Operations Provided:
+ * 
+ * -viewReport():
+ *  -function():display management report for the given date if the date is valid.
+ *  -precondition: system is initiated.
+ *  -postcondition: a management report is displayed.
+ *  -input paremeters: int date.
+ *  -output parameters: String Report.
  
  */
 public class PrintManagementReport {
