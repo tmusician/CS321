@@ -1,3 +1,11 @@
+/*
+Information Hiding Class: MakeReservation
+ Author: Sean Gamble
+Operations Provided:
+run(String [] list)
+    Function : Create and store a new reservation request
+    Input Parameters : String with reservation times, type, credit card info
+    Output Parameters :String of success or failure and relevant information*/
 public class MakeReservation {
  public static String run(String [] list){
   

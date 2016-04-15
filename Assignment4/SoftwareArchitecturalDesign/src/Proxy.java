@@ -1,3 +1,12 @@
+/*
+Information Hiding Class: Proxy
+Author: Krishna Kanakapura.
+ Operations provided:
+validateCard(int cardNo)
+ Function : validate whether or not a credit card number is valid.
+ Input Parameters : cardNo : credit card number to be validated.
+ Output Parameters : Boolean value ( 1 = successful, 0 = unsuccessful).
+*/
 public class Proxy {
  public static boolean validateCard(String[] args) {
   //initialize variables
