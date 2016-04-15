@@ -1,3 +1,32 @@
+/*Information Hiding Class: MakeReservation
+ Author: Sean Gamble
+Operations Provided:
+  1) init()
+  2) checkDays(int start, int end, int roomType)
+     Function: Checks each day bewteen start and end to see if rooms of the given type are free
+     Precondition: Init has been ran
+     Input: start-the first end-last day of stay  type-type of room 
+     Output parameters: Boolean
+  3)addReservation(int start, int end, int type, int resID)
+     Function: Adds reservation to days. Adds ID to list in day
+     Precondition: Init has been ran
+     Input: start-the first end-last day of stay  type-type of room  resID-reservation id 
+     Post condition: Reservation has been added
+  4) nextDay()
+     Function:Incrments current day
+     Precondition: Init has been ran
+     Input: None
+     Output parameters: None
+  5) getInfo()
+     Function:returns the day stored at current day
+     Precondition: Init has been ran
+     Input: None
+     Output parameters:Day
+  6) get_cur_Day()
+     Function: returns current day
+     Precondition: Init has been ran
+     Input: None
+     Output parameters: int*/
 import java.util.ArrayList;
 
 public class Calendar {
