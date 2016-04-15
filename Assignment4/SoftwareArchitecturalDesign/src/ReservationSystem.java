@@ -8,7 +8,7 @@ public class ReservationSystem{
 			Calendar.init();
 			Rooms.init();
 			PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
-			pw.append("==================January "+Calendar.get_cur_Day()+", 2016==================");
+			pw.append("==================January "+Calendar.get_cur_Day()+", 2016==================\n");
 			while(Framework.hasNextInstruction){
 					String[] instructions=Framework.nextInstruction();
 					int next = instructions[0];

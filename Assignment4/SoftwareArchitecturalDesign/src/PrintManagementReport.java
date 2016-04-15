@@ -11,7 +11,7 @@ public class PrintManagementReport {
 			if((given_date > 0)&&(given_date < Calendar.get_cur_Day())){
 				return Report.get_report(given_date);
 			}else{
-				return "INVALID DATE";
+				return "INVALID DATE\n";
 			}
 		}
 	}
