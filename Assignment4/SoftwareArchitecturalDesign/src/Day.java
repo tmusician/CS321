@@ -38,8 +38,9 @@ public class Day {
  /////////////////////////////
  
  // returns reservation IDs in an array
- public  int[] getResIDs() {
-  return this.resIDs.toArray();
+ public  ArrayList<Integer> getResIDs() {
+    return this.resIDs;
+
  }
 
  // returns number of double rooms available
