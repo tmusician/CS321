@@ -1,3 +1,63 @@
+/*
+Information Hiding Class: Day
+Author: Eric Miller
+Operations provided:
+getResIDs()
+ Function: retrieve the list of reservation IDs
+ Input Parameters: none
+ Output parameters: int[]
+ Precondition: reservationIds has been initialized
+ Postcondition: none
+getDoubAvail()
+ Function: retrieve the number of double rooms available
+ Input Parameters: none
+ Output parameters: int
+ Precondition: doubAvail has been initialized
+ Postcondition: none
+getSingAvail()
+ Function: retrieve the number of single rooms available
+ Input Parameters: none
+ Output Parameters: int
+ Precondition: SingAvail has been initialized
+ Postcondition: none
+decDoubAvail()
+ Function: subtract 1 from doubAvail
+ Input Parameters: none
+ Output Parameters: none
+ Precondition: DoubAvail has been initialized
+ Postcondition: doubAvail equals 1 less than previously value
+decSingAvail()
+ Function: subtract 1 from singAvail
+ Input Parameters: none
+ Output Parameters: none
+ Precondition: singAvail has been initialized
+ Postcondition: singAvail equals 1 less than previously value
+incDoubAvail()
+ Function: add 1 to doubAvail
+ Input Parameters: none
+ Output Parameters: none
+ Precondition: DoubAvail has been initialized
+ Postcondition: doubAvail equals 1 more than previously value
+incSingAvail()
+ Function: add 1 to doubAvail
+ Input Parameters: none
+ Output Parameters: none
+ Precondition: DoubAvail has been initialized
+ Postcondition: doubAvail equals 1 more than previously value
+addReservation(int resID)
+ Function: add a reservation ID to the list of reservation IDs
+ Input Parameters: resID: a number corresponding to a unique reservation
+ Output Parameters: none
+ Precondition: resIDs has been initialized
+ Postcondition: resIDs has one more value stored in it
+removeReservation(int resId)
+ Function: remove a reservation from the list of reservation IDs
+ Input Parameters: resID: a number corresponding to a unique reservation
+ Output Parameters: none
+ Precondition: resIDs has been initialized
+ Postcondition: resIDs has one less value stored in it
+	*/
+
 import java.util.*;
 public class Day {
 
