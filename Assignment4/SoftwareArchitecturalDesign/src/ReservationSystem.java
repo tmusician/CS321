@@ -27,7 +27,7 @@ public class ReservationSystem{
 								break;
 					}
 			}
-			pw.close;
+			pw.close();
 		}
 		catch(Exception IOException){
 			System.out.println("No such file found");
