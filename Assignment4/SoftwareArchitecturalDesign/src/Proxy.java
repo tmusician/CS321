@@ -1,6 +1,6 @@
 /*
 Information Hiding Class: Proxy
-Author: Krishna Kanakapura.
+Author: Trenton Eliopoulos.
  Operations provided:
 validateCard(int cardNo)
  Function : validate whether or not a credit card number is valid.

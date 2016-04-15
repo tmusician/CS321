@@ -1,5 +1,6 @@
 /* CLASS INTERFACE SPECIFICATION: 
  * Information Hiding Class : Report:
+ * Author: Krishna Kanakapura.
  * Operations Provided:
  *  -increment and decrement total Occupancy of the Hotel.
  *  -Create management report for current day and store it.
