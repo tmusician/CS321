@@ -50,9 +50,9 @@
 import java.util.*;
 public class Report{
   
-  private static int income = 0;
-  private static int Occupancy = 0;
-  private static HashMap<Integer,String> History = new HashMap<Integer,String>();
+  private static int income;
+  private static int Occupancy;
+  private static HashMap<Integer,String> History;
   
   public static void main(String[] args){
     income = 0;
@@ -87,8 +87,8 @@ public class Report{
     sb.append("Number of Reservations: "+(num_SR_reserved+num_DR_reserved)+"\n");
     sb.append("Single Rooms Reserved: "+ num_SR_reserved +"\n");
     sb.append("Double Rooms Reserved: "+ num_DR_reserved +"\n");
-    sb.append("Occupancy Rate:"+String.format("%2f",((Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100))+"\n");
-    sb.append("Total Revenue: $"+String.format("%.2f",(double)get_income())+"\n");
+    sb.append("Occupancy Rate:"+String.format("%2d",((Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100))+"\n");
+    sb.append("Total Revenue: $"+String.format("%0.2d",(double)get_income())+"\n");
     
     return sb.toString();
   }
