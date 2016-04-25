@@ -21,3 +21,4 @@ public class Proxy {
   //if charge is odd then return false, else return true
   return (charge % 2 == 0);
 }
+}
