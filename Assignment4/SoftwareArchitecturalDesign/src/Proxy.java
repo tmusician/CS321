@@ -16,4 +16,11 @@ public class Proxy {
   // if credit card number is odd then return false, else return true
   return ((num.endsWith("0"))||(num.endsWith("2"))||(num.endsWith("4"))||(num.endsWith("6"))||(num.endsWith("8")))?true:false ;
  }
+ 
+ public static boolean chargeCard(int charge){
+  //initialize variables
+  int charge = args[0];
+  //if charge is odd then return false, else return true
+  return (charge % 2 == 0);
+  
 }
