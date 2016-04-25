@@ -30,7 +30,7 @@ public class CheckOut {
    return "Invalid Card.";
   }
   else{
-    Proxy.chargeCard(user.Res.getCardNumber, charge);
+    Proxy.chargeCard(cust.getCCNumber, charge);
   }
  
 
