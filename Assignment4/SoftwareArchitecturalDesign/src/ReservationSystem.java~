@@ -16,14 +16,16 @@ main(String[] args)
 import java.util.*;
 import java.io.*;
 public class ReservationSystem{
- public static void main(String[] args){
+ public static void main(String[] args) throws IOException{
   //need calander for day
-  try{
+  //try{
+    System.out.println(args[0]);
    Framework.init(args[0]);
+   System.out.print("here");
    Calendar.init();
    Rooms.init();
    PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
-   pw.append("==================January "+Calendar.get_cur_Day()+", 2016==================\n");
+   pw.print("==================January "+Calendar.get_cur_Day()+", 2016==================\n");
    while(Framework.hasNextInstruction()){
      String[] instructions=Framework.nextInstruction();
      int next = Integer.parseInt(instructions[0]);
@@ -42,11 +44,11 @@ public class ReservationSystem{
         break;
      }
    }
-   pw.close();
-  }
-  catch(Exception IOException){
-   System.out.println("No such file found");
-  }
+   //pw.close();
+  //}
+//  catch(Exception IOException){
+//   System.out.println("No such file found");
+//  }
  }
  
 }

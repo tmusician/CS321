@@ -1,54 +1,53 @@
 /*
-Information Hiding Class: ReservationSystem
-Author: Krishna Kanakapura.
-
-Operations provided:
-
-main(String[] args)
+ Information Hiding Class: ReservationSystem
+ Author: Krishna Kanakapura.
+ 
+ Operations provided:
+ 
+ main(String[] args)
  -Function: Instantiation point for the system. Reads instructions from a file and passes the instructions 
-            to respective business logic classes.
+ to respective business logic classes.
  -Input Parameters : args: command line arguments
  -Output Parameters : Strings responses from business logic objects.
  -Precondition: none
  -Postcondition: program has completed successfully.
-*/
+ */
 
 import java.util.*;
 import java.io.*;
 public class ReservationSystem{
- public static void main(String[] args) throws IOException{
-  //need calander for day
-  //try{
-    System.out.println(args[0]);
-   Framework.init(args[0]);
-   System.out.print("here");
-   Calendar.init();
-   Rooms.init();
-   PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
-   pw.print("==================January "+Calendar.get_cur_Day()+", 2016==================\n");
-   while(Framework.hasNextInstruction()){
-     String[] instructions=Framework.nextInstruction();
-     int next = Integer.parseInt(instructions[0]);
-     switch(next){
-      case 1: pw.print(MakeReservation.run(instructions));
-        break;
-      case 2: pw.print(CheckIn.checkIn(instructions));
-        break;
-      case 3: pw.print(CheckOut.checkOut(instructions));
-        break;
-      case 4: pw.print(PrintManagementReport.viewReport(instructions));
-        break;
-      case 5: pw.print(DayChange.change_day(instructions));
-        break;
-      case 6: pw.print(SixPmAlarm.run(instructions));
-        break;
-     }
-   }
-   //pw.close();
-  //}
-//  catch(Exception IOException){
-//   System.out.println("No such file found");
-//  }
- }
- 
+  public static void main(String[] args) throws IOException{
+    try{
+      
+      Framework.init(args[0]);
+      
+      Calendar.init();
+      Rooms.init();
+      PrintWriter pw = new PrintWriter(new File("HRSLog_InputFileName.txt"));
+      pw.print("==================January "+Calendar.get_cur_Day()+", 2016==================\n");
+      while(Framework.hasNextInstruction()){
+        String[] instructions=Framework.nextInstruction();
+        int next = Integer.parseInt(instructions[0]);
+        switch(next){
+          case 1: pw.print(MakeReservation.run(instructions));
+          break;
+          case 2: pw.print(CheckIn.checkIn(instructions));
+          break;
+          case 3: pw.print(CheckOut.checkOut(instructions));
+          break;
+          case 4: pw.print(PrintManagementReport.viewReport(instructions));
+          break;
+          case 5: pw.print(DayChange.change_day(instructions));
+          break;
+          case 6: pw.print(SixPmAlarm.run(instructions));
+          break;
+        }
+      }
+      pw.close();
+    }
+    catch(Exception IOException){
+      System.out.println("No such file found");
+    }
+  }
+  
 }
