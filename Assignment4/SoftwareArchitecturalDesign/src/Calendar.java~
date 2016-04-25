@@ -57,7 +57,7 @@ public class Calendar {
   }
   else if(roomType==2){
    for(int i=0; i<=end-start; i++){
-    if(dayInfo.get(start+i-1).getDoubAvail()==0){
+    if(dayInfo.get(start+i).getDoubAvail()==0){
      return false;
     }
    }
@@ -76,7 +76,7 @@ public class Calendar {
   //if double room
   else if(type==2){
    for(int i=0; i<=end-start; i++){
-    dayInfo.get(start+i-1).decDoubAvail();
+    dayInfo.get(start+i).decDoubAvail();
    }
   }
   dayInfo.get(start).addReservation(resID);
