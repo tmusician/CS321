@@ -30,9 +30,9 @@ public class CheckOut {
    return "Invalid Card.";
   }
   else{
-  // UserRes.chargeCard(charge);
+    Proxy.chargeCard(charge);
   }
-  
+ 
 
   //assign room# to res, 0-MAX_singles is singles and max singles-max doubles is doubles
   int roomNum = userRes.getRoomNumber();
