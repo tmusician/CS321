@@ -56,7 +56,7 @@ removeReservation(int resId)
  Output Parameters: none
  Precondition: resIDs has been initialized
  Postcondition: resIDs has one less value stored in it
-	*/
+ */
 
 import java.util.*;
 public class Day {
@@ -142,20 +142,20 @@ public class Day {
  public void addReservation(int resID) {
   this.resIDs.add(resID);
   Reservation res = Framework.getReservationByID(resID);
-  if (res.getRoomType() == 1)
-   this.incSingAvail();
-  else
-   this.incDoubAvail();
+  //if (res.getRoomType() == 1)
+   //this.incSingAvail();
+  //else
+   //this.incDoubAvail();
  }
  
  // remove a reservation by ID
  public void removeReservation(int resID) {
   this.resIDs.remove(resID);
   Reservation res = Framework.getReservationByID(resID);
-  if (res.getRoomType() == 1)
-   this.decSingAvail();
-  else
-   this.decDoubAvail();
+  //if (res.getRoomType() == 1)
+   //this.decSingAvail();
+  //else
+   //this.decDoubAvail();
  }
 
 }
