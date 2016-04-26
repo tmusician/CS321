@@ -26,7 +26,7 @@ public class DayChange {
   
   for(int i=0; i<cur_reservs.size(); i++){
    Reservation temp = Framework.getReservationByID(cur_reservs.get(i));
-   if((temp.getGuaranteed()==1)&&((temp.getStatus()!=Framework.STATUS_CHECKED_IN)&&(temp.getStatus()!=Framework.STATUS_CHECKED_OUT))){
+   if((temp.getStatus()!=Framework.STATUS_CHECKED_IN)&&(temp.getStatus()!=Framework.STATUS_CHECKED_OUT)){
     //no show condition.
     Customer no_show = Framework.getCustomerByID(temp.getCustomerID());
     op.append(no_show.getName()+" did not show.\n");

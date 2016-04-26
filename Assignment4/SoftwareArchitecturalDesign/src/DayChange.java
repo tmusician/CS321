@@ -23,15 +23,15 @@ public class DayChange {
   
   Day today = Calendar.getInfo();
   ArrayList<Integer> cur_reservs = today.getResIDs();
-  
+  System.out.print(cur_reservs.size());
   for(int i=0; i<cur_reservs.size(); i++){
    Reservation temp = Framework.getReservationByID(cur_reservs.get(i));
-   if((temp.getStatus()!=Framework.STATUS_CHECKED_IN)&&(temp.getStatus()!=Framework.STATUS_CHECKED_OUT)){
+   if(temp.getStatus()!= Framework.STATUS_CHECKED_IN){
     //no show condition.
     Customer no_show = Framework.getCustomerByID(temp.getCustomerID());
     op.append(no_show.getName()+" did not show.\n");
-    temp.setStatus(Framework.STATUS_NO_SHOW);
-   } continue;
+    //temp.setStatus(Framework.STATUS_NO_SHOW);
+   }
   }
   
   Report.day_change();

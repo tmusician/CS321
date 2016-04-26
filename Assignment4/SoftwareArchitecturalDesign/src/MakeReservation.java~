@@ -80,8 +80,8 @@ public class MakeReservation {
   newRes.setEndDate(stopDate);
   newRes.setRoomType(roomType);
   
-  printStr=printStr+"Check In: "+"January "+startDate+", 2016\n";
-  printStr=printStr+"Check Out: "+"January "+stopDate+", 2016\n";
+  printStr=printStr+"Check In: "+"January "+startDate+", 2015\n";
+  printStr=printStr+"Check Out: "+"January "+stopDate+", 2015\n";
   //customer ID and Res ID
   int custID=Framework.storeCustomer(newCust);
   newRes.setCustomerID(custID);
