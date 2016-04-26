@@ -6,6 +6,7 @@ Guaranteed: True
 Check In: January 1, 2016
 Check Out: January 3, 2016
 
+Bernard L. Silver did not show.
 ==================January 2, 2016==================
 
 Make Reservation request forPaul H. Grant:
@@ -40,8 +41,8 @@ Make Reservation request forChristopher A. Woods:
 Reservation failed
 
 Management Report for 1/3/2016:
-Number of Reservations: 1
-Single Rooms Reserved: 1
+Number of Reservations: 0
+Single Rooms Reserved: 0
 Double Rooms Reserved: 0
 Occupancy Rate:0.000000
 Total Revenue: $0.00

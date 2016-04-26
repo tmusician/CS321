@@ -70,16 +70,18 @@ public class Calendar {
   //if single room
   if(type==1){
    for(int i=0; i<=end-start; i++){
-    dayInfo.get(start+i).decSingAvail();
+    dayInfo.get(start+i-1).decSingAvail();
+    (dayInfo.get(start+i-1)).addReservation(resID);
    }
   }
   //if double room
   else if(type==2){
    for(int i=0; i<=end-start; i++){
     dayInfo.get(start+i-1).decDoubAvail();
+    (dayInfo.get(start+i-1)).addReservation(resID);
    }
   }
-  dayInfo.get(start).addReservation(resID);
+  //(dayInfo.get(start)).addReservation(resID);
   return true;
  }
  
@@ -91,7 +93,7 @@ public class Calendar {
  
  //returns the day object of current day
  public static Day getInfo(){
-  return dayInfo.get(curDay-1);
+  return dayInfo.get(curDay);
  }
  //returns current date
  public static int get_cur_Day(){

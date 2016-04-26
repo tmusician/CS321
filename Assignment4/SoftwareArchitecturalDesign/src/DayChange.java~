@@ -23,7 +23,6 @@ public class DayChange {
   
   Day today = Calendar.getInfo();
   ArrayList<Integer> cur_reservs = today.getResIDs();
-  System.out.print(cur_reservs.size());
   for(int i=0; i<cur_reservs.size(); i++){
    Reservation temp = Framework.getReservationByID(cur_reservs.get(i));
    if(temp.getStatus()!= Framework.STATUS_CHECKED_IN){
