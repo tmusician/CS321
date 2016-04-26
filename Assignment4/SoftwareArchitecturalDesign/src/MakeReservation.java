@@ -10,7 +10,7 @@ public class MakeReservation {
  public static String run(String [] list){
   
   boolean success=true; 
-  String printStr="Make Reservation request for";
+  String printStr="Make Reservation request for ";
   String x=list[1];
   Customer newCust= new Customer();
   
