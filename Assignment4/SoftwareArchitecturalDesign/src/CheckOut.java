@@ -23,7 +23,7 @@ public class CheckOut {
   int rate = (userRes.getRoomType() == 1)?Framework.SINGLE_RATE:Framework.DOUBLE_RATE; //single_rate or double_rate
   int charge = days * rate;
   //check card through proxy
-  String[] array= new String[1];
+  String[] array= new String[2];
   array[0]=cust.getCCNumber();
   array[1]="100";
   if(Proxy.validateCard(array) == false){

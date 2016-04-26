@@ -1,0 +1,19 @@
+==================January 9, 2016==================
+Make Reservation request forBernard L. Silver:
+3777 Franklin Avenue, Houston, TX 78401Reservation failed
+Make Reservation request forPaul H. Grant:
+1926 Koontz Lane, El Monte, CA 91731Reservation failed
+Make Reservation request forCathrine J. Karam:
+1126 Gorby Lane, Jackson, MS 39201Reservation failed
+Make Reservation request forScott A. Lacombe:
+3916 Kelley Road, Biloxi, MS 39530Reservation failed
+Make Reservation request forChester D. Morgan:
+2003 Hanover Street, New York, NY 10007Reservation failed
+Make Reservation request forChristopher A. Woods:
+2501 Waterview Lane, Albuquerque, NM 87102Reservation failed
+Management Report for 1/9/2016:
+Number of Reservations: 1
+Single Rooms Reserved: 0
+Double Rooms Reserved: 1
+Occupancy Rate:0.000000
+Total Revenue: $0.00
