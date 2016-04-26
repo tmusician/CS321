@@ -33,7 +33,9 @@ public class MakeReservation {
    success=false;
   }
   //if succeed the check 
+  String temp;
   if(success){
+   temp=printStr;
    printStr=printStr+"Reservation: Success\n";
   }
   //if check failed, returned that it failed
@@ -57,7 +59,7 @@ public class MakeReservation {
    array[0]=list[10];
    array[1]=list[9];
    if(!Proxy.validateCard(array)){
-    printStr=printStr+"Reservation failed\n";
+    printStr=temp+"Reservation failed\n";
     return printStr;
    }
    printStr=printStr+"Guaranteed: True\n";
