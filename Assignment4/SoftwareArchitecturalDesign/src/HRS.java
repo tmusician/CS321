@@ -15,7 +15,7 @@
 
 import java.util.*;
 import java.io.*;
-public class ReservationSystem{
+public class HRS{
   public static void main(String[] args) throws IOException{
 //    try{
       
@@ -23,7 +23,7 @@ public class ReservationSystem{
       
       Calendar.init();
       Rooms.init();
-      PrintWriter pw = new PrintWriter(new File("HRSLog_"+args[0]+".txt"));
+      PrintWriter pw = new PrintWriter(new File("HRSLog_"+args[0]));
       pw.print("==================January "+Calendar.get_cur_Day()+", 2016==================\n\n");
       while(Framework.hasNextInstruction()){
         String[] instructions=Framework.nextInstruction();
