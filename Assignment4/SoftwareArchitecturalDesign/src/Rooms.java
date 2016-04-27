@@ -82,10 +82,10 @@ public class Rooms {
  
  public static void emptyRoom(int room){
   if(room>numSig){
-   doubRoomsInUse.set(room-numSig-1, 0);
+   doubRoomsInUse.set(room-numSig, 0);
   }
   else{
-   sigRoomsInUse.set(room-1, 0);
+   sigRoomsInUse.set(room, 0);
   }
  }
 }
