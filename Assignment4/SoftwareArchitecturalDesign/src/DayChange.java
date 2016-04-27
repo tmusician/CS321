@@ -32,8 +32,8 @@ public class DayChange {
     Customer no_show = Framework.getCustomerByID(temp.getCustomerID());
     op.append(no_show.getName()+" did not show.\n");
     temp.setStatus(Framework.STATUS_NO_SHOW);
-    Framework.deleteReservation(cur_reservs.get(i));
-    today.removeReservation(cur_reservs.get(i));
+    
+    Calendar.removeReservation(cur_reservs.get(i));
     
     
    }
