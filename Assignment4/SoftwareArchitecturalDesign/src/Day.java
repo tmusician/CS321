@@ -77,8 +77,8 @@ public class Day {
  // default constructor 
  public Day() {
   // initialize fields
-  this.doubAvail = 0;
-  this.singAvail = 0;
+  this.doubAvail = Framework.NUM_DOUBLE_ROOMS;
+  this.singAvail = Framework.NUM_SINGLE_ROOMS;
   this.resIDs = new ArrayList<Integer>();
  }
  
