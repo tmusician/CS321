@@ -17,7 +17,7 @@ import java.util.*;
 import java.io.*;
 public class ReservationSystem{
   public static void main(String[] args) throws IOException{
-    try{
+//    try{
       
       Framework.init(args[0]);
       
@@ -44,10 +44,10 @@ public class ReservationSystem{
         }
       }
       pw.close();
-    }
-    catch(Exception IOException){
-      System.out.println("No such file found");
-    }
+//    }
+//    catch(Exception IOException){
+//      System.out.println("No such file found");
+//    }
   }
   
 }
