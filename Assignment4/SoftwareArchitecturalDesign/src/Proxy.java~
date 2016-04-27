@@ -10,10 +10,15 @@ validateCard(int cardNo)
 public class Proxy {
  public static boolean validateCard(String[] args) {
   //initialize variables
-  int num = Integer.parseInt(args[0]);
-  int expDate = Integer.parseInt(args[1]);
+  String num = args[0];
+  String expDate = args[1];
   
   // if credit card number is odd then return false, else return true
-  return num % 2 != 0;
+  return ((num.endsWith("0"))||(num.endsWith("2"))||(num.endsWith("4"))||(num.endsWith("6"))||(num.endsWith("8")))?true:false ;
  }
+ 
+ public static boolean chargeCard(String cardNumber, int charge){
+  //if charge is odd then return false, else return true
+  return (charge % 2 == 0);
+}
 }
