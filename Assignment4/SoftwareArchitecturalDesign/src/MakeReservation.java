@@ -20,7 +20,7 @@ public class MakeReservation {
     
   x=list[2];
   newCust.setAddress(x);
-  printStr=printStr+x;
+  printStr=printStr+x+"\n";
     
   x=list[3];
   int startDate=Integer.parseInt(x);
