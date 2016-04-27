@@ -25,9 +25,25 @@ public class CheckIn {
  public static String checkIn(String[] instr) {
   // initialize variables 
   Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
-  Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
+  Reservation userRes= null; // the reservation for the customer retrieved by customer ID
   boolean checkedIn = false; // keeps track if customer has necessary information to check in
   String output = "";
+  
+  Day dayInfo = Calendar.getInfo();
+  
+  for (int i = 0; i < dayInfo.getResIDs().size(); i++){
+	  Reservation r = Framework.getReservationByID(dayInfo.getResIDs().get(i));
+	  if (r.getCustomerID() == cust.getCustomerID()) {
+		  userRes = r;
+		  break;
+	  }
+	  
+  }
+  if (userRes == null){
+	  output = output + instr[1] + " was not successfully checked in.";
+	  return output;
+  }
+  
   
   // if a credit type is given then update the credit card information 
   if (instr.length == 5){    // if instruction does not include 5 arguemtns, then no credit type was given (it's the only option value
