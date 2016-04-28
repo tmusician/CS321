@@ -150,7 +150,7 @@ public class Day {
  
  // remove a reservation by ID
  public void removeReservation(int resID) {
-  this.resIDs.remove(resID);
+  this.resIDs.remove((Object)resID);
   Framework.deleteReservation(resID);
   //Reservation res = Framework.getReservationByID(resID);
   //if (res.getRoomType() == 1)

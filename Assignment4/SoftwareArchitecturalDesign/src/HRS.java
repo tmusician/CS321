@@ -45,8 +45,8 @@ public class HRS{
           pw.print(DayChange.change_day(instructions)+"\n");
           break;
         case 6: 
-          pw.print("SixPmAlarm\n");
-          //pw.print(SixPmAlarm.run(instructions)+"\n");
+          //pw.print("SixPmAlarm\n");
+          pw.print(SixPmAlarm.run(instructions)+"\n");
           break;
       }
     }
