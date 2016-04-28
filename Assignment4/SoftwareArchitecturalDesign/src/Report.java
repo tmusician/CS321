@@ -87,7 +87,7 @@ public class Report{
     sb.append("Number of Reservations: "+(num_SR_reserved+num_DR_reserved)+"\n");
     sb.append("Single Rooms Reserved: "+ num_SR_reserved +"\n");
     sb.append("Double Rooms Reserved: "+ num_DR_reserved +"\n");
-    sb.append("Occupancy Rate:"+String.format("%2f",((Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100))+"\n");
+    sb.append("Occupancy Rate:"+String.format("%2.0f%%",((Occupancy/((double)(Framework.NUM_SINGLE_ROOMS+Framework.NUM_DOUBLE_ROOMS)))*100))+"\n");
     sb.append("Total Revenue: $"+String.format("%.2f",(double)get_income())+"\n");
     
     return sb.toString();
