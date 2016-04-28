@@ -24,8 +24,7 @@ public class SixPmAlarm {
    Reservation temp = Framework.getReservationByID(reservations.get(i));
    if (temp.getGuaranteed()==0){
     pm.append("Cancelled Reservation for "+((Framework.getCustomerByID(temp.getCustomerID())).getName())+"\n");
-    Framework.deleteReservation(reservations.get(i));
-    (Calendar.getInfo()).removeReservation(temp.getReservationID());
+    Calendar.removeReservation(temp.getReservationID());
    }continue;
   }
   return pm.toString();
