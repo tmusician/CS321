@@ -18,8 +18,19 @@ public class CheckOut {
   String output = "";
   
   //check if user is checked in
- if(!Framework.STATUS_CHECKED_IN){
-   return "Not Checked In.";
+    Day dayInfo = Calendar.getInfo();
+  
+  for (int i = 0; i < dayInfo.getResIDs().size(); i++){
+	  Reservation r = Framework.getReservationByID(dayInfo.getResIDs().get(i));
+	  if (r.getCustomerID() == cust.getCustomerID()) {
+		  userRes = r;
+		  break;
+	  }
+	  
+  }
+  if (userRes == null){
+	  output = output + instr[1] + " was not successfully checked in.";
+	  return output;
   }
 
   //update the money based on start_Date and end_date rates (rate differs by single and double rates)
