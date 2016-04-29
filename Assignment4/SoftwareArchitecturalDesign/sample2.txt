@@ -1,0 +1,109 @@
+@1
+Bernard L. Silver
+3777 Franklin Avenue, Houston TX 78401
+1
+3
+1 
+2
+1
+Visa
+2/2016 
+4716001921994146670
+
+@2
+Bernard L. Silver
+
+@5
+
+@1
+Paul H. Grant
+1926 Koontz Lane, El Monte, CA 91731
+13
+14
+1 
+1
+0
+
+@1
+Cathrine J. Karam
+1126 Gorby Lane, Jackson, MS 39201
+26
+31
+2 
+4
+1
+MasterCard 
+10/2017 
+5435546026874590558
+
+@5
+
+@3
+Bernard L. Silver
+
+@1
+Scott A. Lacombe
+3916 Kelley Road, Biloxi, MS 39530
+5
+12
+2
+4
+0
+
+@1
+Chester D. Morgan
+2003 Hanover Street, New York, NY 10007
+27
+28
+1
+1
+0
+
+@5
+@5
+
+@2
+Scott A. Lacombe
+Visa 
+10/2015
+4916654729817642554
+
+@1
+Christopher A. Woods
+2501 Waterview Lane, Albuquerque, NM 87102
+23
+30
+1
+1
+1
+Visa 
+7/2016 
+4532712964978455747
+
+@5
+@5
+@5
+@5
+@5
+@5
+@5
+
+@3 
+Scott A. Lacombe
+
+@5
+
+@2
+Paul H. Grant
+MasterCard
+11/2019 
+5505353506387275979
+
+@5
+
+@3
+Paul H. Grant
+
+@5
+
+@4
