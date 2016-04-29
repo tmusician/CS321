@@ -13,7 +13,7 @@ public class CheckOut {
  public static String checkOut(String[] instr) {
   //initalize variables
   Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
-  Reservation userRes= Framework.getReservationByName(instr[1])); // the reservation for the customer retrieved by customer name
+  Reservation userRes= null; // the reservation for the customer retrieved by customer name
   boolean checkedOut = false; // keeps track if customer has necessary information to check out
   String output = "";
   
@@ -29,7 +29,7 @@ public class CheckOut {
 	  
   }
   if (userRes == null){
-	  output = output + instr[1] + " was not successfully checked in.";
+	  output = output + instr[1] + " was not successfully checked out.";
 	  return output;
   }
 
