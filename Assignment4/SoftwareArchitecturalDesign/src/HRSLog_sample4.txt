@@ -1,0 +1,27 @@
+==================January 1, 2016==================
+
+Make Reservation request for Bernard L. Silver:
+3777 Franklin Avenue, Houston, TX 78401
+Reservation: Success
+Guaranteed: True
+Check In: January 1, 2016
+Check Out: January 3, 2016
+
+Make Reservation request for Paul H. Grant:
+1926 Koontz Lane, El Monte, CA 91731
+Reservation: Success
+Guaranteed: False
+Check In: January 2, 2016
+Check Out: January 3, 2016
+
+Bernard L. Silver did not show.
+==================January 2, 2016==================
+
+Bernard L. Silver was not successfully checked in.
+6PM Signal:
+Cancelled Reservation for Paul H. Grant
+
+Rose T. Oswalt was not successfully checked in.
+==================January 3, 2016==================
+
+Bernard L. Silver was not successfully checked out.

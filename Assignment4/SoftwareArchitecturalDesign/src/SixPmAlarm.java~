@@ -18,14 +18,15 @@ public class SixPmAlarm {
   
   StringBuilder pm = new StringBuilder();
   pm.append("6PM Signal:\n");
+  
   ArrayList<Integer> reservations = (Calendar.getInfo()).getResIDs();
   
-  for(int i=0; i<reservations.size(); i++){
+  for(int i=reservations.size()-1; i>=0; i--){
    Reservation temp = Framework.getReservationByID(reservations.get(i));
    if (temp.getGuaranteed()==0){
     pm.append("Cancelled Reservation for "+((Framework.getCustomerByID(temp.getCustomerID())).getName())+"\n");
     Calendar.removeReservation(temp.getReservationID());
-   }continue;
+   }
   }
   return pm.toString();
  }

@@ -17,7 +17,7 @@ public class SixPmAlarm {
  public static String run(String[] args) {
   
   StringBuilder pm = new StringBuilder();
-  pm.append("6PM Signal:\n");
+  pm.append("\n6PM Signal:\n");
   
   ArrayList<Integer> reservations = (Calendar.getInfo()).getResIDs();
   
