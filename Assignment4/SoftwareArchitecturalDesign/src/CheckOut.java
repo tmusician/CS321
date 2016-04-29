@@ -16,6 +16,11 @@ public class CheckOut {
   Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
   boolean checkedOut = false; // keeps track if customer has necessary information to check out
   String output = "";
+  
+  //check if user is checked in
+ if(userRes.getStatus() != 1){
+   return "Not Checked In.";
+  }
 
   //update the money based on start_Date and end_date rates (rate differs by single and double rates)
   //charge credit card
