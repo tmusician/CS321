@@ -13,12 +13,12 @@ public class CheckOut {
  public static String checkOut(String[] instr) {
   //initalize variables
   Customer cust=Framework.getCustomerByName(instr[1]); // the customer data retrieved by customer's name
-  Reservation userRes= Framework.getReservationByCID(cust.getCustomerID()); // the reservation for the customer retrieved by customer ID
+  Reservation userRes= Framework.getReservationByName(instr[1])); // the reservation for the customer retrieved by customer name
   boolean checkedOut = false; // keeps track if customer has necessary information to check out
   String output = "";
   
   //check if user is checked in
- if(userRes.getStatus() != 1){
+ if(!Framework.STATUS_CHECKED_IN){
    return "Not Checked In.";
   }
 
