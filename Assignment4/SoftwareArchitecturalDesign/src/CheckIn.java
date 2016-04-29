@@ -55,7 +55,7 @@ public class CheckIn {
   }
   
   // if credit type is not given then check if reservation is guaranteed and compare credit information to the reservation
-  else if(instr.length == 4 && userRes.getGuaranteed()==0 && cust.getCCExpiration().equals(instr[instr.length - 2]) && cust.getCCNumber().equals(instr[instr.length - 1]))
+  else if(instr.length == 2 && userRes.getGuaranteed()== 1 && cust.getCCExpiration().equals(instr[instr.length - 2]) && cust.getCCNumber().equals(instr[instr.length - 1]))
     checkedIn = true;
   
   // finish checking in the customer if they have provided sufficient information
