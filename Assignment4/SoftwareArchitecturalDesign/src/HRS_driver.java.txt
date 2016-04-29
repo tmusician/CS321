@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*;
+public class HRS_driver{
+  public static void main(String[] args) throws IOException{
+    try{
+    
+    Framework.init(args[0]);
+    
+    Calendar.init();
+    Rooms.init();
+    PrintWriter pw = new PrintWriter(new File("HRSLog_"+args[0]));
+    pw.print("==================January "+Calendar.get_cur_Day()+", 2016==================\n\n");
+    while(Framework.hasNextInstruction()){
+      String[] instructions=Framework.nextInstruction();
+      int next = Integer.parseInt(instructions[0]);
+      switch(next){
+        case 1: 
+          pw.print("MakeReservation\n");
+          break;
+        case 2: 
+          pw.print("CheckIn\n");
+          break;
+        case 3: 
+          pw.print("CheckOut\n");
+          break;
+        case 4:
+          pw.print("PrintManagementReport\n");
+          break;
+        case 5: 
+          pw.print("DayChange\n");
+          break;
+        case 6: 
+          //pw.print("SixPmAlarm\n");
+          pw.print("SixPmAlarm\n");
+          break;
+      }
+    }
+    pw.close();
+    }
+    catch(Exception IOException){
+      System.out.println("No such file found");
+    }
+  }
+  
+}

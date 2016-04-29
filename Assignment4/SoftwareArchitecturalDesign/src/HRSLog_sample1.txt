@@ -51,6 +51,6 @@ Management Report for 1/3/2016:
 Number of Reservations: 0
 Single Rooms Reserved: 0
 Double Rooms Reserved: 0
-Occupancy Rate:0.000000
+Occupancy Rate: 0%
 Total Revenue: $0.00
 
