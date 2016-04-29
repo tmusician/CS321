@@ -17,7 +17,7 @@ import java.util.*;
 import java.io.*;
 public class HRS{
   public static void main(String[] args) throws IOException{
-//    try{
+    try{
     
     Framework.init(args[0]);
     
@@ -51,10 +51,10 @@ public class HRS{
       }
     }
     pw.close();
-//    }
-//    catch(Exception IOException){
-//      System.out.println("No such file found");
-//    }
+    }
+    catch(Exception IOException){
+      System.out.println("No such file found");
+    }
   }
   
 }
