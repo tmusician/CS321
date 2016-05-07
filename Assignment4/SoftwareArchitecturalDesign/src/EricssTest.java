@@ -6,48 +6,54 @@ public class tester {
 		Day day = new Day();
 		
 		// test day getters
-//		System.out.println(day.getDoubAvail());
-//		System.out.println(day.getSingAvail());
-//		System.out.println(day.getResIDs());
-//		
+		
+		System.out.println("Day Tests");
+		System.out.println("Getter Test");
+		System.out.println(day.getDoubAvail());
+		System.out.println(day.getSingAvail());
+		System.out.println(day.getResIDs());
+		
 		// test incrementors 
 	
-//		System.out.print(day.getDoubAvail());
-//		System.out.println(", " +day.getSingAvail());
-//		
-//		for (int i = 0; i < 10; i++){
-//			day.incDoubAvail();
-//			System.out.print(day.getDoubAvail());
-//			day.incSingAvail();
-//			System.out.println(", " + day.getSingAvail());
-//		}
-//		
-//		for (int i = 0; i < 10; i++){
-//			day.decDoubAvail();
-//			System.out.print(day.getDoubAvail());
-//			day.decSingAvail();
-//			System.out.println(", " + day.getSingAvail());
-//		}
+		System.out.println("Increment Test");
+		System.out.print(day.getDoubAvail());
+		System.out.println(", " +day.getSingAvail());
+		
+		for (int i = 0; i < 10; i++){
+			day.incDoubAvail();
+			System.out.print(day.getDoubAvail());
+			day.incSingAvail();
+			System.out.println(", " + day.getSingAvail());
+		}
+		
+		for (int i = 0; i < 10; i++){
+			day.decDoubAvail();
+			System.out.print(day.getDoubAvail());
+			day.decSingAvail();
+			System.out.println(", " + day.getSingAvail());
+		}
 		
 		// test reservation add and remove
+		System.out.println("Reservation Addition and Removal Test");
 		
-//		Reservation res = new Reservation();
-//		
-//		System.out.println("Size before add " + day.getResIDs().size()); 
-//		
-//		day.addReservation(0);
-//		
-//		System.out.println("After add " + day.getResIDs().size()); 
-//		
-//		System.out.println("Size before remove " + day.getResIDs().size()); 
-//		
-//		day.removeReservation(0);
-//		
-//		System.out.println("After remove " + day.getResIDs().size()); 
+		Reservation res = new Reservation();
+		
+		System.out.println("Size before add " + day.getResIDs().size()); 
+		
+		day.addReservation(0);
+		
+		System.out.println("After add " + day.getResIDs().size()); 
+		
+		System.out.println("Size before remove " + day.getResIDs().size()); 
+		
+		day.removeReservation(0);
+		
+		System.out.println("After remove " + day.getResIDs().size()); 
 		
 		
 		// test checkIn
 		
+		System.out.println("\nCheckIn Test");
 		try {
 			Framework.init(args[0]);
 		} catch (Exception e) {
